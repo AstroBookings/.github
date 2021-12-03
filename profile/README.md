@@ -7,11 +7,11 @@
 
 ## 🔭 Mission
 
-- As a programmers instructor
+- As a **programmers instructor**
 
-- I want to build in public _real-world-full-stack-from-requirements-to-deployment_
+- I want to **build in public a _real-world-full-stack-from-requirements-to-deployment_ solution**
 
-- So I can to teach you the most.
+- So I can **teach you the most.**
 
 
 
@@ -19,7 +19,7 @@
 
 > A fictitious **space tourism** company that wants a platform to offer rocket tickets and reservation of rooms in space hotels.
 
-Yeah, we will need to create an administrative application for employees and a web portal for their clients. All backed with databases and real-time updates. **A full-stack solution ready to use.**
+Yeah, we will need to create an administrative application for employees and a web portal for their clients. All backed with databases and real-time updates. **Tested and ready to use.**
 
 
 
@@ -33,7 +33,7 @@ I am twitting about tech stuff every day, and sure about the evolution of #Astro
 
 ### On your email
 
-I send once or twice per week an email sharing the evolution and insights of the project development. You can [subscribe to the newsletter here.](https://www.getrevue.co/profile/albertobasalo)
+I send once or twice per week an email sharing the insights of the project development. You can [subscribe to the newsletter here.](https://www.getrevue.co/profile/albertobasalo)
 
 ### On Medium
 
@@ -51,7 +51,7 @@ I am Alberto Basalo, a seasoned (**L** years old, almost from the roman numerals
 
 I am focused on coding best practices, testing, and software architecture, with a special bias for the JavaScript ecosystem.
 
-*I am glad to take you with me, hope you can* *learn to develop your dream trip.*
+I am glad to take you with me, hope I can help you to *develop your dream trip.*
 
 *Learn, code, enjoy, repeat.*
 
