@@ -2,29 +2,28 @@
 
 ## Community Development
 
->Welcome to the home of this open learning project of building a **real-world-full-stack-from-requirements-to-deployment** solution.
-
-## Who?
-
-I am Alberto Basalo, a seasoned (L years old, almost from the roman numerals era) advisor and instructor for programmers.
+>Welcome to the home of this **open learning project**.
 
 
+## 🔭 Mission
 
-## Mission
+- As a programmers instructor
 
-Build in public the biggest and best application that I can to teach you the most.
+- I want to build in public _real-world-full-stack-from-requirements-to-deployment_
+
+- So I can to teach you the most.
 
 
 
-## Astro Bookings
+## 🚀 Astro Bookings
 
-A fictitious **space tourism** company that wants a platform to offer rocket tickets and reservation of rooms in space hotels.
+> A fictitious **space tourism** company that wants a platform to offer rocket tickets and reservation of rooms in space hotels.
 
 Yeah, we will need to create an administrative application for employees and a web portal for their clients. All backed with databases and real-time updates. **A full-stack solution ready to use.**
 
 
 
-## The project
+## 🛰️ The project
 
 You can follow the entire process online.
 
@@ -45,6 +44,12 @@ A distilled version of such emails is also published as [blog posts on my Medium
 Of course, *the truth is in the code*. And all the code, the project roadmap, supporting documentation, and deployment configuration will be at this organization.
 
 ---
+
+## 👨‍🚀 About
+
+I am Alberto Basalo, a seasoned (**L** years old, almost from the roman numerals era) advisor and instructor for programmers.
+
+I am focused on coding best practices, testing, and software architecture, with a special bias for the JavaScript ecosystem.
 
 *I am glad to take you with me, hope you can* *learn to develop your dream trip.*
 
