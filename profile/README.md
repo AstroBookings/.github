@@ -29,7 +29,8 @@ You can follow the entire process online.
 
 ### On Twitter
 
-I am twitting about tech stuff every day, and sure about the evolution of #AstroBookins. You can [follow me on @albertobasalo](https://twitter.com/albertobasalo)
+I am twitting about tech stuff every day, and sure about the evolution of [#AstroBookings](https://twitter.com/hashtag/AstroBookings?). 
+You can [follow me on @albertobasalo](https://twitter.com/albertobasalo)
 
 ### On your email
 
