@@ -19,30 +19,30 @@
 
 > A fictitious **space tourism** company that wants a platform to offer rocket tickets and reservation of rooms in space hotels.
 
-Yeah, we will need to create an administrative application for employees and a web portal for their clients. All backed with databases and real-time updates. **Tested and ready to use.**
+Yeah, we will need to create an administrative application for employees, an API for providers, and a web portal for their clients. All backed with databases and real-time updates. **Tested and ready to use.**
 
 
 
 ## 🛰️ The project
 
-You can follow the entire process online.
+You can follow the entire development process online: **from requirements to deployment**. Just check the best media for you.
 
-### On Twitter
+### ▶️ On Twitter
 
 I am twitting about tech stuff every day, and sure about the evolution of [#AstroBookings](https://twitter.com/hashtag/AstroBookings?). 
-You can [follow me on @albertobasalo](https://twitter.com/albertobasalo)
+You can [**follow me on @albertobasalo twitter account**](https://twitter.com/albertobasalo)
 
-### On your email
+### ▶️ On your email
 
-I send once or twice per week an email sharing the insights of the project development. You can [subscribe to the newsletter here.](https://www.getrevue.co/profile/albertobasalo)
+I send once or twice per week an email sharing the insights of the project development. You can [**subscribe to the newsletter here.**](https://www.getrevue.co/profile/albertobasalo)
 
-### On Medium
+### ▶️ On Medium
 
-A distilled version of such emails is also published as [blog posts on my Medium account.](https://medium.com/@albertobasalo)
+A distilled version of such emails is also published as blog posts so you can [**read the articles on my Medium account.**](https://medium.com/@albertobasalo)
 
-### On GitHub
+### ▶️ On GitHub
 
-Of course, *the truth is in the code*. And all the code, the project roadmap, supporting documentation, and deployment configuration will be at this organization.
+Of course, *the truth is in the code*. And all the code, the project roadmap, supporting documentation, and deployment configuration will be at [**this AstroBookings organization.**](https://github.com/AstroBookings)
 
 ---
 
