@@ -2,7 +2,7 @@
 
 ## [Community Development](https://www.getrevue.co/profile/albertobasalo)
 
->Welcome to the home of this **open learning project**.
+> Welcome to the home of this **open learning project**. More info on the [project wiki](https://github.com/AstroBookings/.github/wiki)
 
 
 ## 🔭 Mission
