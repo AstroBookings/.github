@@ -1,8 +1,12 @@
 # Astro Bookings
 
-## [Community Development](https://www.getrevue.co/profile/albertobasalo)
+## [📨 Community Development](https://www.getrevue.co/profile/albertobasalo)
 
-> Welcome to the home of this **open learning project**. More info on the [project wiki](https://github.com/AstroBookings/.github/wiki)
+### An open-source solution meant to teach real development skills.
+
+#### Learn full-stack development from requirements to deployment. 
+
+#### Modern technology and proven best practices.
 
 
 ## 🔭 Mission
@@ -14,13 +18,11 @@
 - So I can **teach you the most.**
 
 
-
 ## 🚀 Astro Bookings
 
 > A fictitious **space tourism** company that wants a platform to offer rocket tickets and reservation of rooms in space hotels.
 
 Yeah, we will need to create an administrative application for employees, an API for providers, and a web portal for their clients. All backed with databases and real-time updates. **Tested and ready to use.**
-
 
 
 ## 🛰️ The project
@@ -43,6 +45,12 @@ A distilled version of such emails is also published as blog posts so you can [*
 ### ▶️ On GitHub
 
 Of course, *the truth is in the code*. And all the code, the project roadmap, supporting documentation, and deployment configuration will be at [**this AstroBookings organization.**](https://github.com/AstroBookings)
+
+--- 
+
+## [Project wiki](https://github.com/AstroBookings/.github/wiki)
+
+Documentation realtive to the project (requirements, design, coding guides, user manual...)
 
 ---
 
