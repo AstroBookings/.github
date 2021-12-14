@@ -1,6 +1,6 @@
 # Astro Bookings
 
-## [Community Development](https://github.com/AstroBookings/.github/wiki/Astro-Bookings-Community-Development)
+## [Community Development](https://github.com/AstroBookings/.github/wiki)
 
 ### An open-source solution meant to teach real development skills.
 
@@ -45,7 +45,7 @@ A distilled version of such emails is also published as blog posts so you can [*
 
 Of course, *the truth is in the code*. And all the code, the project roadmap, supporting documentation, and deployment configuration will be at [**this AstroBookings organization.**](https://github.com/AstroBookings)
 
-#### [📚 Project wiki](https://github.com/AstroBookings/.github/wiki/Astro-Bookings-Community-Development)
+#### [📚 Project wiki](https://github.com/AstroBookings/.github/wiki)
 
 Documentation realtive to the project (requirements, design, coding guides, user manual...)
 
