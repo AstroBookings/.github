@@ -3,7 +3,7 @@ The portal for Astro Bookings Community Development
 
 > this `.github` is a special repository for GitHub organizations having a profile. It is not intended to write any code here.
 
-## [Project wiki](https://github.com/AstroBookings/.github/wiki)
+## [Project wiki](https://github.com/AstroBookings/.github/wiki/Astro-Bookings-Community-Development)
 
 Documentation realtive to the project (requirements, design, coding guides, user manual...)
 
