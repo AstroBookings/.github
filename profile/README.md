@@ -1,13 +1,12 @@
 # Astro Bookings
 
-## [📨 Community Development](https://www.getrevue.co/profile/albertobasalo)
+## [Community Development](https://github.com/AstroBookings/.github/wiki/Astro-Bookings-Community-Development)
 
 ### An open-source solution meant to teach real development skills.
 
 #### Learn full-stack development from requirements to deployment. 
 
 #### Modern technology and proven best practices.
-
 
 ## 🔭 Mission
 
@@ -46,9 +45,7 @@ A distilled version of such emails is also published as blog posts so you can [*
 
 Of course, *the truth is in the code*. And all the code, the project roadmap, supporting documentation, and deployment configuration will be at [**this AstroBookings organization.**](https://github.com/AstroBookings)
 
---- 
-
-## [Project wiki](https://github.com/AstroBookings/.github/wiki)
+#### [📚 Project wiki](https://github.com/AstroBookings/.github/wiki/Astro-Bookings-Community-Development)
 
 Documentation realtive to the project (requirements, design, coding guides, user manual...)
 
