@@ -1,11 +1,11 @@
 # Astro Bookings GitHub Organization
 The portal for Astro Bookings Community Development
 
-> this `.github` is a special repository for GitHub organizations having a profile. It is not intended to write any code here.
+> This `.github` thing is a special repository for _GitHub_. It allows organizations having a profile. It is not intended to write any code here. But is also usefull to store a _wiki_.
 
-## [Project wiki](https://github.com/AstroBookings/.github/wiki/Astro-Bookings-Community-Development)
+## [Astro Bookings Project wiki](https://github.com/AstroBookings/.github/wiki/Astro-Bookings-Community-Development)
 
-Documentation realtive to the project (requirements, design, coding guides, user manual...)
+Documentation realtive to the development project (requirements, design, coding guides, user manual...)
 
 ## [Project newsletter](https://www.getrevue.co/profile/albertobasalo)
 
