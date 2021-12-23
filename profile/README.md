@@ -1,6 +1,8 @@
 # Astro Bookings
 
-## [Community Development](https://github.com/AstroBookings/.github/wiki)
+## Community Development
+
+> [_See project wiki for detailed info_](https://github.com/AstroBookings/.github/wiki)
 
 ### An open-source solution meant to teach real development skills.
 
