@@ -4,13 +4,15 @@
 
 > [_See project wiki for detailed info_](https://github.com/AstroBookings/.github/wiki)
 
-### An open-source solution meant to teach real development skills.
+### 💫 Learn to code by doing _a space travel booking_ project 
 
-#### Learn full-stack development from requirements to deployment. 
+#### ▶️ An open-source solution meant to teach you real coding skills.
 
-#### Modern technology and proven best practices.
+#### ▶️ F**ull-stack development from requirements to deployment.**
 
-## 🔭 Mission
+#### ▶️ **Modern technology and proven best practices.**
+
+## 🧑‍🚀 Mission
 
 - As a **programmers instructor**
 
@@ -25,10 +27,23 @@
 
 Yeah, we will need to create an administrative application for employees, an API for providers, and a web portal for their clients. All backed with databases and real-time updates. **Tested and ready to use.**
 
-
 ## 🛰️ The project
 
-You can follow the entire development process online: **from requirements to deployment**. Just check the best media for you.
+### 📡 **What about the technology and requirements?**
+
+This will be something related to **web technology and the JavaScript** language ecosystem. So you need a basic understanding of web development. During the journey I will teach you:
+
+- **TypeScript**
+- **Node** with Express and NestJS
+- **Git** and GitHub workflows
+- **MongoDB** or a similar document database
+- **PostgreSQL** or a similar relational database
+- **RabbitMQ** or a similar message broker
+- **Angular**, React, Svelte, or a similar front-end framework.
+
+---
+
+> 🌐 You can follow the entire development process online: **from requirements to deployment**. Just check the best media for you.
 
 ### ▶️ On Twitter
 
@@ -55,7 +70,7 @@ Documentation realtive to the project (requirements, design, coding guides, user
 
 ## 👨‍🚀 About
 
-I am Alberto Basalo, a seasoned (**L** years old, almost from the roman numerals era) advisor and instructor for programmers.
+I am Alberto Basalo, a seasoned (**L** years old, almost from the roman numerals era) advisor, consultor and instructor for programmers.
 
 I am focused on coding best practices, testing, and software architecture, with a special bias for the JavaScript ecosystem.
 
