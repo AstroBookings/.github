@@ -18,6 +18,13 @@ Learn full-stack development from requirements to deployment.
 
 Modern technology and proven best practices.
 
+- Angular
+- Cypress
+- Jest
+- MongoDB
+- NestJS
+- Postgres
+
 ---
 
 <footer>
