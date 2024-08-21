@@ -70,16 +70,22 @@ Our solution provides a comprehensive set of tools for agencies to maintain thei
 ```mermaid
 graph TD
     subgraph Web Applications[" "]
-        AgencyWeb[AgencyWeb]
+        AgencyWeb(2 - AgencyWeb)
+        AuthWeb(0 - AuthWeb)
     end
 
     subgraph API Services[" "]
-        AgencyAPI[AgencyAPI]
+        AgencyAPI[1 - AgencyAPI]
+        SystemAPI[0 - SystemAPI]
+        NotifyAPI[4 - NotifyAPI]
     end
 
     subgraph Databases[" "]
         OperationsDB[(OperationsDB)]
     end
+
+    %% Web to Web connections
+    AgencyWeb <-.-> AuthWeb
 
     %% Web to API connections
     AgencyWeb --> AgencyAPI

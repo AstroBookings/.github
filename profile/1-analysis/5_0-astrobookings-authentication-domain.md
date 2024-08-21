@@ -66,15 +66,15 @@ Our solution implements JSON Web Tokens (JWT) for stateless authentication, prov
 ```mermaid
 graph TD
     subgraph Web Applications[" "]
-        AuthWeb[AuthWeb]
+        AuthWeb(0 - AuthWeb)
     end
 
     subgraph API Services[" "]
-        SystemAPI[SystemAPI]
+        SystemAPI[0 - SystemAPI]
     end
 
     subgraph Databases[" "]
-        SystemDB[(SystemDB)]
+        SystemDB[(0 - SystemDB)]
     end
 
     %% Web to API connections
