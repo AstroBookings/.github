@@ -1,1 +1,0 @@
-# 3. Financial Operations Domain

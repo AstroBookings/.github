@@ -25,9 +25,9 @@ AstroBookings is a comprehensive platform connecting space agencies with travele
 - `IT employee`: A specialized employee managing technical aspects of the system.
 - `system`: The AstroBookings platform itself, performing automated tasks.
 
-# User Stories by Domain
+## User Stories by Domain
 
-## 0. Authentication
+### 0. Authentication
 
 - As a `visitor` I want to **register an account** so that _I can access the system_
 - As a `user` I want to **log in to the system** so that _I can access my account_
@@ -35,7 +35,7 @@ AstroBookings is a comprehensive platform connecting space agencies with travele
 - As the `system` I need to **generate a JWT for a validated user** so that _I can maintain their session securely_
 - As the `system` I need to **validate a JWT and identify the user** so that _I can ensure secure access to protected resources_
 
-## 1. Agency Management
+### 1. Agency Management
 
 - As an `agency` I want to **create and manage my profile** so that _I can offer my services_
 - As an `agency` I want to **add and manage my rockets** so that _I can use them for launches_
@@ -44,7 +44,7 @@ AstroBookings is a comprehensive platform connecting space agencies with travele
 - As an `agency` I want to **delay, abort, fail or mark as successful my scheduled launches** so that _I can manage their status_
 - As an `agency` I want to **view a report of bookings for successful launches** so that _I can issue invoices_
 
-## 2. Booking Management
+### 2. Booking Management
 
 - As a `visitor` I want to **view available launches** so that _I can choose a space trip_
 - As a `visitor` I want to **register as a traveler with my contact and tax information** so that _I can book trips and receive proper invoicing from agencies_
@@ -52,7 +52,7 @@ AstroBookings is a comprehensive platform connecting space agencies with travele
 - As a `traveler` I want to **view updates on the status of my booked launch** so that _I can stay informed about my trip_
 - As a `traveler` I want to **cancel my booking and receive a refund if eligible** so that _I can change my plans if necessary_
 
-## 3. Financial Operations
+### 3. Financial Operations
 
 - As an `employee` I want to **generate invoices for agencies based on successful launches** so that _we can charge for our services_
 - As an `employee` I want to **generate invoices for agencies for aborted launches** so that _we can cover platform usage costs_
@@ -60,7 +60,7 @@ AstroBookings is a comprehensive platform connecting space agencies with travele
 - As an `employee` I want to **view a revenue report for each agency** so that _I can analyze their financial performance_
 - As an `employee` I want to **generate an annual report of actual and pending revenues** so that _I can assess the overall financial health of the platform_
 
-## 4. Notification System
+### 4. Notification System
 
 - As an `agency` I want to **receive email notifications about my launches** so that _I can stay informed about their status, bookings, and cancellations_
 - As a `traveler` I want to **receive email notifications about my bookings** so that _I can stay informed about cancellations, delays, or aborts of my booked launches_
@@ -68,13 +68,13 @@ AstroBookings is a comprehensive platform connecting space agencies with travele
 - As an `IT employee` I want to **view the status of the notification queue** so that _I can ensure proper system operation_
 - As an `IT employee` I want to **change the status of notifications** so that _I can manage the notification system effectively_
 
-## 5. Data Synchronization
+### 5. Data Synchronization
 
 - As a `system` I want to **record the origin of each data change** so that _I can ensure accurate synchronization_
 - As an `IT employee` I want to **initiate synchronization processes between databases** so that _I can maintain data consistency_
 - As an `IT employee` I want to **monitor the status of data synchronization processes** so that _I can ensure they complete successfully_
 
-## 6. System Monitoring
+### 6. System Monitoring
 
 - As a `system` I want to **save logs of all activities** so that _I can maintain a record of what has happened_
 - As an `IT employee` I want to **view system logs** so that _I can monitor system behavior_
@@ -82,7 +82,7 @@ AstroBookings is a comprehensive platform connecting space agencies with travele
 
 ---
 
-# 0. Authentication
+## 0. Authentication
 
 Supports user registration, login, and secure access control for all system users including agencies, travelers, and employees. Implements JWT (JSON Web Token) for maintaining secure sessions.
 
@@ -119,7 +119,7 @@ Supports user registration, login, and secure access control for all system user
 
 ---
 
-# 1. Agency Management
+## 1. Agency Management
 
 Handles the creation and management of agency profiles, their rockets, and launch operations. Provides tools for agencies to schedule and manage their space launches.
 
@@ -161,7 +161,7 @@ Handles the creation and management of agency profiles, their rockets, and launc
 
 ---
 
-# 2. Booking Management
+## 2. Booking Management
 
 Manages the process of viewing available launches, booking seats, and handling cancellations for travelers. Also includes the public-facing website for showcasing upcoming launches.
 
@@ -200,7 +200,7 @@ Manages the process of viewing available launches, booking seats, and handling c
 
 ---
 
-# 3. Financial Operations
+## 3. Financial Operations
 
 Handles all financial aspects of the platform including invoicing, payment tracking, and financial reporting.
 
@@ -236,7 +236,7 @@ Handles all financial aspects of the platform including invoicing, payment track
 
 ---
 
-# 4. Notification System
+## 4. Notification System
 
 Manages all communications with users about bookings, launches, and other important events.
 
@@ -272,7 +272,7 @@ Manages all communications with users about bookings, launches, and other import
 
 ---
 
-# 5. Data Synchronization
+## 5. Data Synchronization
 
 Manages the synchronization of data between different databases in the system to ensure consistency across all platforms.
 
@@ -295,7 +295,7 @@ Manages the synchronization of data between different databases in the system to
 
 ---
 
-# 6. System Monitoring
+## 6. System Monitoring
 
 Provides comprehensive logging and monitoring capabilities to ensure smooth operation of the entire system.
 

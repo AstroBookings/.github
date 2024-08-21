@@ -6,10 +6,6 @@ The portal for Astro Bookings Community Development
 > This `.github` thing is a special repository for _GitHub_.
 > It allows organizations having a profile. It is not intended to write any code here. But is also useful to store a _wiki_.
 
-## [Astro Bookings Project wiki](https://github.com/AstroBookings/.github/wiki/Astro-Bookings-Community-Development)
-
-Documentation relative to the development project (requirements, design, coding guides, user manual...)
-
 ## [Astro Bookings](https://github.com/AstroBookings)
 
 An open-source solution meant to teach real development skills.
@@ -24,6 +20,12 @@ Modern technology and proven best practices.
 - MongoDB
 - NestJS
 - Postgres
+
+![Astro Bookings Logo](./AstroBookings.png)
+
+## [Astro Bookings Project wiki](https://github.com/AstroBookings/.github/wiki/Astro-Bookings-Community-Development)
+
+Documentation relative to the development project (requirements, design, coding guides, user manual...)
 
 ---
 
