@@ -1,6 +1,6 @@
 # Astro Bookings
 
-> Book your trip to the stars 🚀
+> Sample project for teaching full-stack development with modern technology and proven best practices.
 
 ## 🚀 Company mission
 
