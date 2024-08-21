@@ -61,7 +61,7 @@ The Booking Management domain in AstroBookings manages traveler bookings, seat r
 graph TD
     subgraph Web Applications
         PublicWeb(1 - PublicWeb)
-        AgencyWeb(2 - AgencyWeb)
+        TravelerWeb(3 - TravelerWeb)
         AuthWeb(0 - AuthWeb)
     end
 
