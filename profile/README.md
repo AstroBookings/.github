@@ -24,10 +24,10 @@ The solution is a set of web applications made with `Angular` that consume sever
 
 ### 🧑‍🔬 Analysis
 
-0. [Project Summary Briefing](./1-analysis/0-astrobookings-project-briefing.md)
-1. [Detailed Domain requirements](./1-analysis/1-astrobookings-domain-requirements.md)
-2. [System architecture](./1-analysis/2-astrobookings-system-architecture.md)
-3. [Data model](./1-analysis/3-astrobookings-erd.md)
+- [0. Project Summary Briefing](./1-analysis/0-astrobookings-project-briefing.md)
+- [1. Detailed Domain requirements](./1-analysis/1-astrobookings-domain-requirements.md)
+- [2. System architecture](./1-analysis/2-astrobookings-system-architecture.md)
+- [3. Data model](./1-analysis/3-astrobookings-erd.md)
 
 #### Domain specifics
 
