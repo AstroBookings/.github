@@ -59,19 +59,19 @@ The Booking Management domain in AstroBookings manages traveler bookings, seat r
 
 ```mermaid
 graph TD
-    subgraph Web Applications[""]
+    subgraph Web Applications[" "]
         PublicWeb(1 - PublicWeb)
         TravelerWeb(3 - TravelerWeb)
         AuthWeb(0 - AuthWeb)
     end
 
-    subgraph API Services[""]
+    subgraph API Services[" "]
         BookingAPI[2 - BookingAPI]
         SystemAPI[0 - SystemAPI]
         NotifyAPI[4 - NotifyAPI]
     end
 
-    subgraph Databases[""]
+    subgraph Databases[" "]
         CacheDB[(2 - CacheDB)]
     end
 
