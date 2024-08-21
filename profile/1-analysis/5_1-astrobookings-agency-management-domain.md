@@ -100,9 +100,9 @@ graph TD
     %% Style
     classDef web fill:#FF9999,stroke:#333,stroke-width:2px;
     classDef api fill:#C1E1C1,stroke:#333,stroke-width:2px;
-    classDef db fill:#FFFFE0,stroke:#333,stroke-width:2px;
-    class AgencyWeb,PublicWeb,SystemWeb web;
-    class AgencyAPI,SystemAPI,NotifyAPI api;
+    classDef db fill:#ADD8E6,stroke:#333,stroke-width:2px;
+    class AgencyWeb web;
+    class AgencyAPI api;
     class OperationsDB db;
 ```
 
