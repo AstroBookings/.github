@@ -22,22 +22,27 @@ Create a solution for [**🚀 AstroBookings**](https://github.com/AstroBookings)
 
 The solution is a set of web applications made with `Angular` that consume several REST APIs made with `NestJS`. Data is stored in `Postgres` and `MongoDB` databases.
 
+- [0. Project Summary Briefing](./0-project.briefing.md)
+
 ### 🧑‍🔬 Analysis
 
-- [0. Project Summary Briefing](./1-analysis/0-astrobookings-project-briefing.md)
-- [1. Detailed Domain requirements](./1-analysis/1-astrobookings-domain-requirements.md)
-- [2. System architecture](./1-analysis/2-astrobookings-system-architecture.md)
-- [3. Data model](./1-analysis/3-astrobookings-erd.md)
+- [1. Detailed Domain requirements](./1-analysis/1-domain.requirements.md)
+- [2. System requirements](./1-analysis/2-system.requirements.md)
+
+## 🎨 Design
+
+- [2. System architecture](./2-design/2-system.architecture.md)
+- [3. Data model](./2-design/3-model.erd.md)
 
 #### Domain specifics
 
-- [0. Authentication](./1-analysis/5_0-astrobookings-authentication-domain.md)
-- [1. Agencies](./1-analysis/5_1-astrobookings-agency-management-domain.md)
-- [2. Bookings](./1-analysis/5_2-astrobookings-booking-management-domain.md)
-- [3. Financial](./1-analysis/5_3-astrobookings-financial-operations-domain.md)
-- [4. Notifications](./1-analysis/5_4-astrobookings-notification-system-domain.md)
-- [5. Data Synchronization](./1-analysis/5_5-astrobookings-data-synchronization-domain.md)
-- [6. Monitoring](./1-analysis/5_6-astrobookings-system-monitoring-domain.md)
+- [0. Authentication](./2-design/4_0-authentication.domain.md)
+- [1. Agencies](./2-design/4_1-agency.management-domain.md)
+- [2. Bookings](./2-design/4_2-booking.management-domain.md)
+- [3. Financial](./2-design/4_3-financial.operations-domain.md)
+- [4. Notifications](./2-design/4_4-notification.system-domain.md)
+- [5. Data Synchronization](./2-design/4_5-data.synchronization-domain.md)
+- [6. Monitoring](./2-design/4_6-system.monitoring-domain.md)
 
 ---
 

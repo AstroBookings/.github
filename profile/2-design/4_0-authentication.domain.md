@@ -59,7 +59,6 @@ Our solution implements JSON Web Tokens (JWT) for stateless authentication, prov
 ### 📇 Databases
 
 - `📇 SystemDB`: Stores user authentication data.
-- `📇 OperationsDB`: Stores user profiles for traveler and agency.
 
 ### Component Interfaces
 
