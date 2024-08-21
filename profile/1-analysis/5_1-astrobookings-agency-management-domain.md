@@ -142,17 +142,18 @@ This diagram illustrates the interfaces between the components involved in the A
 ```mermaid
 erDiagram
     Agency {
-        int id PK
-        string name
+        int user_id PK,FK
         string description
         string contact_info
+        string legal_name
+        string tax_id
+        string legal_address
     }
 
     Rocket {
         int id PK
         int agency_id FK
         string name
-        string model
         int capacity
         enum range
     }
@@ -169,24 +170,25 @@ erDiagram
 
     Booking {
         int id PK
-        int launch_id FK
         int traveler_id FK
+        int launch_id FK
         int number_of_seats
         decimal total_price
+        enum status
     }
 
-    Agency ||--|{ Rocket : "owns"
-    Agency ||--|{ Launch : "schedules"
-    Rocket ||--|{ Launch : "used in"
+    Agency ||--o{ Rocket : "owns"
+    Agency ||--o{ Launch : "schedules"
+    Rocket ||--o{ Launch : "used in"
     Launch ||--o{ Booking : "has"
 ```
 
 This ERD shows the following relationships:
 
-1. An `Agency` can own multiple `Rockets` (one-to-many relationship).
-2. An `Agency` can schedule multiple `Launches` (one-to-many relationship).
-3. A `Rocket` can be used in multiple `Launches` (one-to-many relationship).
-4. A `Launch` can have multiple `Bookings` (one-to-many relationship).
+1. An `Agency` can own multiple `Rockets`
+2. An `Agency` can schedule multiple `Launches`
+3. A `Rocket` can be used in multiple `Launches`
+4. A `Launch` can have multiple `Bookings`
 
 ---
 

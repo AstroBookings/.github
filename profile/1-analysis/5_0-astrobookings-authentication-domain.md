@@ -126,10 +126,6 @@ This diagram illustrates the interfaces between the components involved in the A
    - Specialization of User entity for space agencies offering launches.
    - Inherits from User and may contain additional fields specific to agencies.
 
-4. `EntryLog`:
-   - Used to record authentication-related activities for auditing purposes.
-   - May include fields like timestamp, user_id, action (e.g., login, logout, registration).
-
 ### Entity-Relationship Diagram
 
 ```mermaid
@@ -150,25 +146,16 @@ erDiagram
         int user_id PK,FK
     }
 
-    EntryLog {
-        int id PK
-        int user_id FK
-        datetime timestamp
-        string action
-        string details
-    }
-
     User ||--o| Traveler : "is a"
     User ||--o| Agency : "is a"
-    User ||--o{ EntryLog : "has"
+
 ```
 
 This diagram ERD shows the following relationships:
 
 1. `User` is the base entity that can be specialized into `Traveler` or `Agency` (relationship "is a").
-2. `User` has a one-to-many relationship with `EntryLog`, allowing multiple log entries for each user.
-3. `Traveler` and `Agency` are specializations of `User`, inheriting its attributes and potentially adding specific attributes (not shown in this simplified diagram).
-4. `EntryLog` has a foreign key `user_id` that relates to the primary key of `User`.
+2. A`Traveler` must be a `User`.
+3. An `Agency` must be a `User`.
 
 ---
 
