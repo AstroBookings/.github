@@ -89,7 +89,6 @@ graph TD
     BookingAPI --> NotifyAPI
 
     %% API to Database connections
-    BookingAPI --> OperationsDB
     BookingAPI --> CacheDB
 
     %% Style
