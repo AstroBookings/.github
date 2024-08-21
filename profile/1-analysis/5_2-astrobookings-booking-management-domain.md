@@ -83,7 +83,6 @@ graph TD
     PublicWeb --> BookingAPI
     TravelerWeb --> BookingAPI
 
-
     %% API to API connections
     BookingAPI --> SystemAPI
     BookingAPI --> NotifyAPI

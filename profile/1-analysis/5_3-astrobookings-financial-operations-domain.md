@@ -58,24 +58,34 @@ The Financial Operations domain in AstroBookings handles invoicing, payments, an
 
 ```mermaid
 graph TD
-    subgraph Web Applications
-        SystemWeb[SystemWeb]
+    subgraph Web Applications[ ]
+        AuthWeb(0 - AuthWeb)
+        SystemWeb(4 - SystemWeb)
     end
 
-    subgraph API Services
-        FinanceAPI[FinanceAPI]
+    subgraph API Services[ ]
+        SystemAPI[0 - SystemAPI]
+        FinanceAPI[3 - FinanceAPI]
+        NotifyAPI[4 - NotifyAPI]
     end
 
-    subgraph Databases
-        OperationsDB[(OperationsDB)]
+    subgraph Databases[ ]
+        OperationsDB[(1 - OperationsDB)]
     end
 
-    subgraph External Services
-        PaymentGW[PaymentGW]
+    subgraph External[ ]
+        PaymentGW[2 - PaymentGW]
     end
+
+    %% Web to Web connections
+    SystemWeb <-.-> AuthWeb
 
     %% Web to API connections
     SystemWeb --> FinanceAPI
+
+    %% API to API connections
+    FinanceAPI --> SystemAPI
+    FinanceAPI --> NotifyAPI
 
     %% API to Database connections
     FinanceAPI --> OperationsDB
@@ -86,12 +96,11 @@ graph TD
     %% Style
     classDef web fill:#FF9999,stroke:#333,stroke-width:2px;
     classDef api fill:#C1E1C1,stroke:#333,stroke-width:2px;
-    classDef db fill:#FFFFE0,stroke:#333,stroke-width:2px;
-    classDef ext fill:#ADD8E6,stroke:#333,stroke-width:2px;
+    classDef db fill:#ADD8E6,stroke:#333,stroke-width:2px;
+    classDef ext fill:#E6E6FA,stroke:#333,stroke-width:2px;
     class SystemWeb web;
     class FinanceAPI api;
     class OperationsDB db;
-    class PaymentGW ext;
 ```
 
 This diagram illustrates the interfaces between the components involved in the Financial Operations domain:
