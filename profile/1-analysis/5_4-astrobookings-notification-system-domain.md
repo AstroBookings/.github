@@ -138,6 +138,8 @@ erDiagram
         datetime timestamp
         enum status
     }
+
+    User ||--o{ Notification
 ```
 
 This ERD shows the following relationships:
