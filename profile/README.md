@@ -10,7 +10,7 @@
 
 Create a solution for AstroBookings financial and IT employees and also give access to agencies and travelers.
 
-### Requirements
+### 📋 Requirements
 
 - [General requirements from the CEO](./0-requirements/1-AstroBookings-General_requirements-CEO-letter.md)
 - [Operational requirements from the COO](./0-requirements/2-AstroBookings-Operational_requirements-COO-letter.md)
@@ -22,7 +22,7 @@ Create a solution for AstroBookings financial and IT employees and also give acc
 
 The solution is a set ow web applications made with `Angular` that consume several REST APIs made with `NestJS`. Data is stored in `Postgres` and `MongoDB` databases.
 
-### Analysis
+### 🧑‍🔬 Analysis
 
 - [Project Summary Briefing](./1-analysis/4-astrobookings-project-briefing.md)
 - [Detailed Domain requirements](./1-analysis/1-astrobookings-domain-requirements.md)
