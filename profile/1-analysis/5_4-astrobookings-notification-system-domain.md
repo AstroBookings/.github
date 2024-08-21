@@ -59,20 +59,25 @@ The Notification System domain in AstroBookings manages communication with users
 ```mermaid
 graph TD
     subgraph Web Applications
-        SystemWeb[SystemWeb]
+        AuthWeb(0 - AuthWeb)
+        SystemWeb(4 - SystemWeb)
     end
 
     subgraph API Services
-        NotifyAPI[NotifyAPI]
+        SystemAPI[0 - SystemAPI]
+        NotifyAPI[4 - NotifyAPI]
     end
 
     subgraph Databases
-        SystemDB[(SystemDB)]
+        SystemDB[(0 - SystemDB)]
     end
 
     subgraph External Services
-        EmailSvc[EmailSvc]
+        EmailSvc[1 - EmailSvc]
     end
+
+    %% Web to Web connections
+    SystemWeb <-.-> AuthWeb
 
     %% Web to API connections
     SystemWeb --> NotifyAPI
@@ -86,12 +91,11 @@ graph TD
     %% Style
     classDef web fill:#FF9999,stroke:#333,stroke-width:2px;
     classDef api fill:#C1E1C1,stroke:#333,stroke-width:2px;
-    classDef db fill:#FFFFE0,stroke:#333,stroke-width:2px;
-    classDef ext fill:#ADD8E6,stroke:#333,stroke-width:2px;
+    classDef db fill:#ADD8E6,stroke:#333,stroke-width:2px;
+    classDef ext fill:#E6E6FA,stroke:#333,stroke-width:2px;
     class SystemWeb web;
     class NotifyAPI api;
     class SystemDB db;
-    class EmailSvc ext;
 ```
 
 This diagram illustrates the interfaces between the components involved in the Notification System domain:
