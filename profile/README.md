@@ -30,4 +30,8 @@ I am focused on coding best practices, testing, and software architecture, with 
 
 I am glad to take you with me, hope I can help you to _develop your dream trip._
 
-> [!NOTE] > _[Alberto Basalo](https://github.com/albertobasalo)_ > _Elevating Code Quality._
+> [!NOTE]
+
+> _[Alberto Basalo](https://github.com/albertobasalo)_
+
+> _Elevating Code Quality._
