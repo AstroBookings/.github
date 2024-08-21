@@ -31,8 +31,8 @@ The solution is a set of web applications made with `Angular` that consume sever
 
 #### Domain specifics
 
-- [Authentication](./1-analysis/5_0-astrobookings-authentication-domain.md)
-- [Agencies](./1-analysis/5_1-astrobookings-agency-management-domain.md)
+- [0. Authentication](./1-analysis/5_0-astrobookings-authentication-domain.md)
+- [1. Agencies](./1-analysis/5_1-astrobookings-agency-management-domain.md)
 
 ---
 
