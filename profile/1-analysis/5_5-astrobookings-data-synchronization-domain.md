@@ -31,7 +31,7 @@ The Data Synchronization domain in AstroBookings allows IT employees to manage a
 
 ### 🧑‍💼 API Services
 
-- `🧑‍💼 SyncAPI`: Manages data synchronization between databases.
+- `🧑‍💼 SystemAPI`: Manages data synchronization between databases.
 
 ### 📇 Databases
 
@@ -44,33 +44,36 @@ The Data Synchronization domain in AstroBookings allows IT employees to manage a
 ```mermaid
 graph TD
     subgraph Web Applications
-        SystemWeb[SystemWeb]
+        AuthWeb(0 - AuthWeb)
     end
 
     subgraph API Services
-        SyncAPI[SyncAPI]
+        SystemAPI[0 - SystemAPI]
     end
 
     subgraph Databases
-        OperationsDB[(OperationsDB)]
-        SystemDB[(SystemDB)]
-        CacheDB[(CacheDB)]
+        SystemDB[(0 - SystemDB)]
+        OperationsDB[(1 - OperationsDB)]
+        CacheDB[(2 - CacheDB)]
     end
 
+    %% Web to Web connections
+    SystemWeb <-.-> AuthWeb
+
     %% Web to API connections
-    SystemWeb --> SyncAPI
+    SystemWeb --> SystemAPI
 
     %% API to Database connections
-    SyncAPI --> OperationsDB
-    SyncAPI --> SystemDB
-    SyncAPI --> CacheDB
+    SystemAPI --> OperationsDB
+    SystemAPI --> SystemDB
+    SystemAPI --> CacheDB
 
     %% Style
     classDef web fill:#FF9999,stroke:#333,stroke-width:2px;
     classDef api fill:#C1E1C1,stroke:#333,stroke-width:2px;
     classDef db fill:#FFFFE0,stroke:#333,stroke-width:2px;
     class SystemWeb web;
-    class SyncAPI api;
+    class SystemAPI api;
     class OperationsDB,SystemDB,CacheDB db;
 ```
 
