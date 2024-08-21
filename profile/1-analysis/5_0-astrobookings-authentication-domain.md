@@ -169,3 +169,7 @@ This diagram ERD shows the following relationships:
 2. `User` has a one-to-many relationship with `EntryLog`, allowing multiple log entries for each user.
 3. `Traveler` and `Agency` are specializations of `User`, inheriting its attributes and potentially adding specific attributes (not shown in this simplified diagram).
 4. `EntryLog` has a foreign key `user_id` that relates to the primary key of `User`.
+
+---
+
+## [🚀 AstroBookings](https://github.com/AstroBookings)

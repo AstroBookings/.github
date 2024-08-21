@@ -187,3 +187,7 @@ This ERD shows the following relationships:
 2. An `Agency` can schedule multiple `Launches` (one-to-many relationship).
 3. A `Rocket` can be used in multiple `Launches` (one-to-many relationship).
 4. A `Launch` can have multiple `Bookings` (one-to-many relationship).
+
+---
+
+## [🚀 AstroBookings](https://github.com/AstroBookings)
