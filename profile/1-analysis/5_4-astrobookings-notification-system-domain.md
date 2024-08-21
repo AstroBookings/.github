@@ -82,6 +82,9 @@ graph TD
     %% Web to API connections
     SystemWeb --> NotifyAPI
 
+    %% API to API connections
+    NotifyAPI --> SystemAPI
+
     %% API to Database connections
     NotifyAPI --> SystemDB
 
