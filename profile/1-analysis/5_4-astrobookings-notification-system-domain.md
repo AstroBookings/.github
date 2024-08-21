@@ -58,21 +58,21 @@ The Notification System domain in AstroBookings manages communication with users
 
 ```mermaid
 graph TD
-    subgraph Web Applications
+    subgraph Web Applications[ ]
         AuthWeb(0 - AuthWeb)
         SystemWeb(4 - SystemWeb)
     end
 
-    subgraph API Services
+    subgraph API Services[ ]
         SystemAPI[0 - SystemAPI]
         NotifyAPI[4 - NotifyAPI]
     end
 
-    subgraph Databases
+    subgraph Databases[ ]
         SystemDB[(0 - SystemDB)]
     end
 
-    subgraph External Services
+    subgraph External Services[ ]
         EmailSvc[1 - EmailSvc]
     end
 
