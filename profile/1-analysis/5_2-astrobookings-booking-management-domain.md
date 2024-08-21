@@ -67,6 +67,8 @@ graph TD
 
     subgraph API Services[""]
         BookingAPI[2 - BookingAPI]
+        SystemAPI[0 - SystemAPI]
+        NotifyAPI[4 - NotifyAPI]
     end
 
     subgraph Databases[""]
