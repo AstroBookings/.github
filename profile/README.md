@@ -33,6 +33,8 @@ The solution is a set of web applications made with `Angular` that consume sever
 
 - [0. Authentication](./1-analysis/5_0-astrobookings-authentication-domain.md)
 - [1. Agencies](./1-analysis/5_1-astrobookings-agency-management-domain.md)
+- [2. Bookings](./1-analysis/5_2-astrobookings-booking-management-domain.md)
+- [3. Financial](./1-analysis/5_3-astrobookings-financial-operations-domain.md)
 
 ---
 
