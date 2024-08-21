@@ -139,7 +139,7 @@ erDiagram
         enum status
     }
 
-    User ||--o{ Notification
+   User ||--o{ Notification : "can receive"
 ```
 
 This ERD shows the following relationships:
