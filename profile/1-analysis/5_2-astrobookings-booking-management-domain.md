@@ -60,22 +60,31 @@ The Booking Management domain in AstroBookings manages traveler bookings, seat r
 ```mermaid
 graph TD
     subgraph Web Applications
-        PublicWeb[PublicWeb]
-        TravelerWeb[TravelerWeb]
+        PublicWeb(1 - PublicWeb)
+        AgencyWeb(2 - AgencyWeb)
+        AuthWeb(0 - AuthWeb)
     end
 
     subgraph API Services
-        BookingAPI[BookingAPI]
+        BookingAPI[2 - BookingAPI]
     end
 
     subgraph Databases
-        OperationsDB[(OperationsDB)]
-        CacheDB[(CacheDB)]
+        CacheDB[(2 - CacheDB)]
     end
+
+    %% Web to Web connections
+    PublicWeb <-.-> AuthWeb
+    AgencyWeb <-.-> AuthWeb
 
     %% Web to API connections
     PublicWeb --> BookingAPI
     TravelerWeb --> BookingAPI
+
+
+    %% API to API connections
+    BookingAPI --> SystemAPI
+    BookingAPI --> NotifyAPI
 
     %% API to Database connections
     BookingAPI --> OperationsDB
@@ -84,10 +93,10 @@ graph TD
     %% Style
     classDef web fill:#FF9999,stroke:#333,stroke-width:2px;
     classDef api fill:#C1E1C1,stroke:#333,stroke-width:2px;
-    classDef db fill:#FFFFE0,stroke:#333,stroke-width:2px;
+    classDef db fill:#ADD8E6,stroke:#333,stroke-width:2px;
     class PublicWeb,TravelerWeb web;
     class BookingAPI api;
-    class OperationsDB,CacheDB db;
+    class CacheDB db;
 ```
 
 This diagram illustrates the interfaces between the components involved in the Booking Management domain:

@@ -81,7 +81,7 @@ graph TD
     AuthWeb --> SystemAPI
 
     %% API to Database connection
-    SystemAPI --> SystemDB
+    SystemDB[(0 - SystemDB)]
 
     %% Style
     classDef web fill:#FF9999,stroke:#333,stroke-width:2px;

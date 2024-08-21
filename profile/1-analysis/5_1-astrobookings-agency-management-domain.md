@@ -81,7 +81,7 @@ graph TD
     end
 
     subgraph Databases[" "]
-        OperationsDB[(OperationsDB)]
+        OperationsDB[(1 - OperationsDB)]
     end
 
     %% Web to Web connections
