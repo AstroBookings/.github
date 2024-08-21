@@ -1,25 +1,12 @@
 # Astro Bookings GitHub Organization
 
-The portal for Astro Bookings Community Development
+The portal for Astro Bookings Clean Development
 
 > [!NOTE]
 > This `.github` thing is a special repository for _GitHub_.
-> It allows organizations having a profile. It is not intended to write any code here. But is also useful to store a _wiki_.
+> It allows organizations having a profile. It is not intended to write any code here. It is just for documentation and configuration.
 
-## [Astro Bookings](https://github.com/AstroBookings)
-
-An open-source solution meant to teach real development skills.
-
-Learn full-stack development from requirements to deployment.
-
-Modern technology and proven best practices.
-
-- Angular
-- Cypress
-- Jest
-- MongoDB
-- NestJS
-- Postgres
+## [Go to Astro Bookings Core Documentation](https://github.com/AstroBookings)
 
 ![Astro Bookings Logo](./AstroBookings.png)
 
