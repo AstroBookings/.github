@@ -69,15 +69,15 @@ Our solution provides a comprehensive set of tools for agencies to maintain thei
 
 ```mermaid
 graph TD
-    subgraph Web Applications
+    subgraph Web Applications[" "]
         AgencyWeb[AgencyWeb]
     end
 
-    subgraph API Services
+    subgraph API Services[" "]
         AgencyAPI[AgencyAPI]
     end
 
-    subgraph Databases
+    subgraph Databases[" "]
         OperationsDB[(OperationsDB)]
     end
 
