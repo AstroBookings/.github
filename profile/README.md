@@ -35,6 +35,9 @@ The solution is a set of web applications made with `Angular` that consume sever
 - [1. Agencies](./1-analysis/5_1-astrobookings-agency-management-domain.md)
 - [2. Bookings](./1-analysis/5_2-astrobookings-booking-management-domain.md)
 - [3. Financial](./1-analysis/5_3-astrobookings-financial-operations-domain.md)
+- [4. Notifications](./1-analysis/5_4-astrobookings-notification-system-domain.md)
+- [5. Data Synchronization](./1-analysis/5_5-astrobookings-data-synchronization-domain.md)
+- [6. Monitoring](./1-analysis/5_6-astrobookings-system-monitoring-domain.md)
 
 ---
 
