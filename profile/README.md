@@ -22,10 +22,17 @@ Create a solution for AstroBookings financial and IT employees and also give acc
 
 The solution is a set ow web applications made with `Angular` that consume several REST APIs made with `NestJS`. Data is stored in `Postgres` and `MongoDB` databases.
 
+### Analysis
+
 - [Project Summary Briefing](./1-analysis/4-astrobookings-project-briefing.md)
 - [Detailed Domain requirements](./1-analysis/1-astrobookings-domain-requirements.md)
 - [System architecture](./1-analysis/2-astrobookings-system-architecture.md)
 - [Data model](./1-analysis/3-astrobookings-erd.md)
+
+#### Domain specifics
+
+- [Authentication](./1-analysis/5_0-astrobookings-authentication-domain.md)
+- [Agencies](./1-analysis/5_1-astrobookings-agency-management-domain.md)
 
 ---
 
