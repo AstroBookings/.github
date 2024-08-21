@@ -8,7 +8,7 @@
 
 ## 🛰️ The project
 
-Create a solution for **🚀 AstroBookings** financial and IT employees, and also give access to agencies and travelers.
+Create a solution for [**🚀 AstroBookings**](https://github.com/AstroBookings) financial and IT employees, and also give access to agencies and travelers.
 
 ### 📋 Requirements
 
