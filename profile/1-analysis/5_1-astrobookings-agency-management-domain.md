@@ -55,14 +55,11 @@ Our solution provides a comprehensive set of tools for agencies to maintain thei
 ### 🌐 Web Applications
 
 - `🌐 AgencyWeb`: Primary interface for agencies to manage their profiles, rockets, and launches.
-- `🌐 PublicWeb`: Displays agency and launch information to potential travelers.
-- `🌐 SystemWeb`: Allows system administrators to oversee agency operations.
+- `🌐 AuthWeb`: Called to get back user authorization token.
 
 ### 🧑‍💼 API Services
 
 - `🧑‍💼 AgencyAPI`: Handles all agency-related operations and data management.
-- `🧑‍💼 BookingAPI`: Interacts with AgencyAPI for launch and seat availability information.
-- `🧑‍💼 FinanceAPI`: Retrieves booking data for invoice generation.
 
 ### 📇 Databases
 
@@ -74,14 +71,10 @@ Our solution provides a comprehensive set of tools for agencies to maintain thei
 graph TD
     subgraph Web Applications
         AgencyWeb[AgencyWeb]
-        PublicWeb[PublicWeb]
-        SystemWeb[SystemWeb]
     end
 
     subgraph API Services
         AgencyAPI[AgencyAPI]
-        BookingAPI[BookingAPI]
-        FinanceAPI[FinanceAPI]
     end
 
     subgraph Databases
@@ -90,12 +83,10 @@ graph TD
 
     %% Web to API connections
     AgencyWeb --> AgencyAPI
-    PublicWeb --> AgencyAPI
-    SystemWeb --> AgencyAPI
 
     %% API to API connections
-    BookingAPI --> AgencyAPI
-    FinanceAPI --> AgencyAPI
+    AgencyAPI --> SystemAPI
+    AgencyAPI --> NotifyAPI
 
     %% API to Database connection
     AgencyAPI --> OperationsDB
@@ -105,7 +96,7 @@ graph TD
     classDef api fill:#C1E1C1,stroke:#333,stroke-width:2px;
     classDef db fill:#FFFFE0,stroke:#333,stroke-width:2px;
     class AgencyWeb,PublicWeb,SystemWeb web;
-    class AgencyAPI,BookingAPI,FinanceAPI api;
+    class AgencyAPI,SystemAPI,NotifyAPI api;
     class OperationsDB db;
 ```
 

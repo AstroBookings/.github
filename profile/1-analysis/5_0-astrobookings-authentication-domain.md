@@ -50,11 +50,7 @@ Our solution implements JSON Web Tokens (JWT) for stateless authentication, prov
 
 ### 🌐 Web Applications
 
-- `🌐 AuthWeb`: Primary interface for user authentication and registration.
-- `🌐 PublicWeb`: Integrates authentication for accessing personalized features.
-- `🌐 AgencyWeb`: Utilizes authentication for agency login and session management.
-- `🌐 TravelerWeb`: Implements authentication for traveler login and session management.
-- `🌐 SystemWeb`: Uses authentication for employee login and access control.
+- `🌐 AuthWeb`: Primary interface for user authentication and registration, returning tokens.
 
 ### 🧑‍💼 API Services
 
@@ -62,7 +58,8 @@ Our solution implements JSON Web Tokens (JWT) for stateless authentication, prov
 
 ### 📇 Databases
 
-- `📇 SystemDB`: Stores user profiles, authentication data, and system logs.
+- `📇 SystemDB`: Stores user authentication data.
+- `📇 OperationsDB`: Stores user profiles for traveler and agency.
 
 ### Component Interfaces
 
@@ -70,10 +67,6 @@ Our solution implements JSON Web Tokens (JWT) for stateless authentication, prov
 graph TD
     subgraph Web Applications
         AuthWeb[AuthWeb]
-        PublicWeb[PublicWeb]
-        AgencyWeb[AgencyWeb]
-        TravelerWeb[TravelerWeb]
-        SystemWeb[SystemWeb]
     end
 
     subgraph API Services
@@ -86,10 +79,6 @@ graph TD
 
     %% Web to API connections
     AuthWeb --> SystemAPI
-    PublicWeb --> SystemAPI
-    AgencyWeb --> SystemAPI
-    TravelerWeb --> SystemAPI
-    SystemWeb --> SystemAPI
 
     %% API to Database connection
     SystemAPI --> SystemDB
@@ -98,14 +87,14 @@ graph TD
     classDef web fill:#FF9999,stroke:#333,stroke-width:2px;
     classDef api fill:#C1E1C1,stroke:#333,stroke-width:2px;
     classDef db fill:#FFFFE0,stroke:#333,stroke-width:2px;
-    class AuthWeb,PublicWeb,AgencyWeb,TravelerWeb,SystemWeb web;
+    class AuthWeb web;
     class SystemAPI api;
     class SystemDB db;
 ```
 
 This diagram illustrates the interfaces between the components involved in the Authentication domain:
 
-1. All web applications (AuthWeb, PublicWeb, AgencyWeb, TravelerWeb, and SystemWeb) communicate with the SystemAPI for authentication and authorization purposes.
+1. The AuthWeb communicates with the SystemAPI for authentication and authorization purposes.
 2. The SystemAPI is the central service handling all authentication logic and requests.
 3. The SystemAPI interacts with the SystemDB to store and retrieve user data, authentication records, and logs.
 
