@@ -42,17 +42,21 @@ The System Monitoring domain in AstroBookings provides logging and system status
 
 ```mermaid
 graph TD
-    subgraph Web Applications
-        SystemWeb[SystemWeb]
+    subgraph WebApplications[ ]
+        AuthWeb(0 - AuthWeb)
+        SystemWeb(4 - SystemWeb)
     end
 
-    subgraph API Services
-        SystemAPI[SystemAPI]
+    subgraph APIServices[ ]
+        SystemAPI[0 - SystemAPI]
     end
 
-    subgraph Databases
-        SystemDB[(SystemDB)]
+    subgraph Databases[ ]
+        SystemDB[(0 - SystemDB)]
     end
+
+     %% Web to Web connections
+    SystemWeb <-.-> AuthWeb
 
     %% Web to API connections
     SystemWeb --> SystemAPI
