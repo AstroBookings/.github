@@ -10,17 +10,22 @@
 
 Create a solution for AstroBookings financial and IT employees and also give access to agencies and travelers.
 
-- [Project Briefing](./4-astrobookings-project-briefing.md)
-
 ### Requirements
 
-- [Domain requirements](./1-astrobookings-domain-requirements.md)
+- [General requirements from the CEO](./0-requirements/1-AstroBookings-General_requirements-CEO-letter.md)
+- [Operational requirements from the COO](./0-requirements/2-AstroBookings-Operational_requirements-COO-letter.md)
+- [Marketing requirements from the CMO](./0-requirements/3-AstroBookings-Marqueting_requirements-CMO-letter.md)
+- [Financial requirements from the CFO](./0-requirements/4-AstroBookings-Financial_requirements-CFO-letter.md)
+- [Technical requirements from the CTO](./0-requirements/5-AstroBookings-Technical_requirements-CTO-letter.md)
 
 ## 🧑‍💻 The Solution
 
 The solution is a set ow web applications made with `Angular` that consume several REST APIs made with `NestJS`. Data is stored in `Postgres` and `MongoDB` databases.
 
+- [Detailed Domain requirements](./1-astrobookings-domain-requirements.md)
 - [System architecture](./2-astrobookings-system-architecture.md)
+- [Data model](./3-astrobookings-erd.md)
+- [Project Summary Briefing](./4-astrobookings-project-briefing.md)
 
 ---
 
