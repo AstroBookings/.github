@@ -75,7 +75,7 @@ graph TD
 
     %% Web to Web connections
     PublicWeb <-.-> AuthWeb
-    AgencyWeb <-.-> AuthWeb
+    TravelerWeb <-.-> AuthWeb
 
     %% Web to API connections
     PublicWeb --> BookingAPI
