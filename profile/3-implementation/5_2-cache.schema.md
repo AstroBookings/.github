@@ -9,7 +9,7 @@ erDiagram
 
     LaunchCache {
         int id PK
-        datetime date
+        datetime launch_on
         string destination
         decimal price_per_seat
         enum status
@@ -32,6 +32,7 @@ erDiagram
         int launch_id FK
         int number_of_seats
         decimal total_price
+        datetime booked_at
         enum status
         traveler:{
             int user_id FK
@@ -52,7 +53,7 @@ db.createCollection("launches_cache", {
     $jsonSchema: {
       bsonType: "object",
       required: [
-        "date",
+        "launch_on",
         "destination",
         "price_per_seat",
         "status",
@@ -61,7 +62,7 @@ db.createCollection("launches_cache", {
         "rocket",
       ],
       properties: {
-        date: {
+        launch_on: {
           bsonType: "date",
           description: "must be a date and is required",
         },

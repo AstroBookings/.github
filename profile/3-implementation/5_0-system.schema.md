@@ -25,10 +25,12 @@ erDiagram
     EntryLog {
         int id PK
         string entity_type
-        int entity_id
-        string action
+        int entity_id FK
+        int user_id FK
         datetime timestamp
-        string details
+        string level
+        string message
+        json data
     }
 
     JobQueue {
@@ -36,10 +38,10 @@ erDiagram
         string job_type
         string entity_type
         int entity_id
-        enum status
         datetime created_at
         datetime executed_at
         json data
+        enum status
     }
 
     User ||--o{ Notification : "can receive"
@@ -119,27 +121,35 @@ db.createCollection("entry_log", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      required: ["entityType", "entityId", "action", "timestamp", "details"],
+      required: ["level", "message", "timestamp"],
       properties: {
         entityType: {
           bsonType: "string",
-          description: "must be a string and is required",
+          description: "must be a string",
         },
         entity_id: {
           bsonType: "int",
-          description: "must be an integer and is required",
+          description: "must be an integer",
         },
-        action: {
+        user_id: {
+          bsonType: "int",
+          description: "must be an integer",
+        },
+        level: {
+          enum: ["info", "warning", "error"],
+          description: "must be one of the enum values and is required",
+        },
+        message: {
           bsonType: "string",
-          description: "must be a string and is required",
+          description: "must be a string ",
         },
         timestamp: {
           bsonType: "date",
           description: "must be a date and is required",
         },
-        details: {
+        data: {
           bsonType: "string",
-          description: "must be a string and is required",
+          description: "must be a string",
         },
       },
     },
