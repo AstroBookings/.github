@@ -10,9 +10,9 @@ The portal for Astro Bookings Clean Development
 
 ![Astro Bookings Logo](./AstroBookings.png)
 
-## [Astro Bookings Project wiki](https://github.com/AstroBookings/.github/wiki/Astro-Bookings-Community-Development)
+<!-- ## [Astro Bookings Project wiki](https://github.com/AstroBookings/.github/wiki/Astro-Bookings-Community-Development)
 
-Documentation relative to the development project (requirements, design, coding guides, user manual...)
+Documentation relative to the development project (requirements, design, coding guides, user manual...) -->
 
 ---
 
