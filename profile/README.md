@@ -31,8 +31,8 @@ The solution is a set of web applications made with `Angular` that consume sever
 
 ## 🎨 Design
 
-- [2. System architecture](./2-design/2-system.architecture.md)
-- [3. Data model](./2-design/3-model.erd.md)
+- [1. System architecture](./2-design/2-system.architecture.md)
+- [2. Data model](./2-design/3-model.erd.md)
 
 #### Domain specifics
 
@@ -43,6 +43,18 @@ The solution is a set of web applications made with `Angular` that consume sever
 - [4. Notifications](./2-design/4_4-notification-system.domain.md)
 - [5. Data Synchronization](./2-design/4_5-data-synchronization.domain.md)
 - [6. Monitoring](./2-design/4_6-system-monitoring.domain.md)
+
+## 🚀 Implementation
+
+### 📇 DataBase schemas
+
+- [1. SystemDB schema](./3-implementation/5_0-system.schema.md)
+- [2. OperationsDB schema](./3-implementation/5_1-operations.schema.md)
+- [3. CacheDB schema](./3-implementation/5_2-cache.schema.md)
+
+### 📦 API
+
+- [0. Authentication API](./3-implementation/6_0-authentication.api.md)
 
 ---
 
