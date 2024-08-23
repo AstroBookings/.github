@@ -6,7 +6,7 @@
 
 **🚀 AstroBookings** is a fictitious space tourism company that wants a platform for rocket _agencies_ to offer _bookings_ for their launches to _travelers_ who want to fly into space.
 
-## 📡 The project
+## 📡 The Project
 
 Create a solution for financial and IT employees, and also give access to agencies and travelers in order to manage their launches, bookings and financial operations.
 
