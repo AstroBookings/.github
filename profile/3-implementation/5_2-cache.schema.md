@@ -8,18 +8,19 @@ This schema describes the documental `📇 CacheDB` of the AstroBookings platfor
 erDiagram
 
     LaunchCache {
-        int id PK
+        string id PK
         datetime launch_on
         string destination
         decimal price_per_seat
         enum status
         int available_seats
+        string slug
         agency:{
-            int id FK
+            string id FK
             string name
         }
         rocket: {
-            int id PK
+            string id PK
             string name
             int capacity
             enum range
@@ -27,15 +28,15 @@ erDiagram
     }
 
     BookingCache {
-        int id PK
-        int traveler_id FK
-        int launch_id FK
+        string id PK
+        string traveler_id FK
+        string launch_id FK
         int number_of_seats
         decimal total_price
         datetime booked_at
         enum status
         traveler:{
-            int user_id FK
+            string user_id FK
             string contact_phone
             string emergency_contact
             json travel_preferences
@@ -53,15 +54,21 @@ db.createCollection("launches_cache", {
     $jsonSchema: {
       bsonType: "object",
       required: [
+        "id",
         "launch_on",
         "destination",
         "price_per_seat",
         "status",
         "available_seats",
+        "slug",
         "agency",
         "rocket",
       ],
       properties: {
+        id: {
+          bsonType: "string",
+          description: "must be an string and is required",
+        },
         launch_on: {
           bsonType: "date",
           description: "must be a date and is required",
@@ -82,6 +89,10 @@ db.createCollection("launches_cache", {
           bsonType: "int",
           description: "must be an integer and is required",
         },
+        slug: {
+          bsonType: "string",
+          description: "must be a string and is required",
+        },
         agency: {
           bsonType: "object",
           required: ["id", "name"],
@@ -101,8 +112,8 @@ db.createCollection("launches_cache", {
           required: ["id", "name", "capacity", "range"],
           properties: {
             id: {
-              bsonType: "int",
-              description: "must be an integer and is required",
+              bsonType: "string",
+              description: "must be an string and is required",
             },
             name: {
               bsonType: "string",
@@ -122,6 +133,9 @@ db.createCollection("launches_cache", {
     },
   },
 });
+db.launches_cache.createIndex({ id: 1 }, { unique: true });
+db.launches_cache.createIndex({ slug: 1 }, { unique: true });
+db.launches_cache.createIndex({ status: 1 });
 ```
 
 ### Bookings Cache Collection
@@ -131,26 +145,23 @@ db.createCollection("bookings_cache", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      required: [
-        "traveler_id",
-        "launch_id",
-        "number_of_seats",
-        "total_price",
-        "status",
-        "traveler",
-      ],
+      required: ["id", "traveler_id", "launch_id", "number_of_seats", "total_price", "status", "traveler"],
       properties: {
+        id: {
+          bsonType: "string",
+          description: "must be an string and is required",
+        },
         traveler_id: {
-          bsonType: "int",
-          description: "must be an integer and is required",
+          bsonType: "string",
+          description: "must be an string and is required",
         },
         launch_id: {
-          bsonType: "int",
-          description: "must be an integer and is required",
+          bsonType: "string",
+          description: "must be an string and is required",
         },
         number_of_seats: {
-          bsonType: "int",
-          description: "must be an integer and is required",
+          bsonType: "string",
+          description: "must be an string and is required",
         },
         total_price: {
           bsonType: "decimal",
@@ -162,16 +173,11 @@ db.createCollection("bookings_cache", {
         },
         traveler: {
           bsonType: "object",
-          required: [
-            "user_id",
-            "contact_phone",
-            "emergency_contact",
-            "travel_preferences",
-          ],
+          required: ["user_id", "contact_phone", "emergency_contact", "travel_preferences"],
           properties: {
             user_id: {
-              bsonType: "int",
-              description: "must be an integer and is required",
+              bsonType: "string",
+              description: "must be an string and is required",
             },
             contact_phone: {
               bsonType: "string",
@@ -191,4 +197,5 @@ db.createCollection("bookings_cache", {
     },
   },
 });
+db.bookings_cache.createIndex({ traveler_id: 1, launch_id: 1 }, { unique: true });
 ```

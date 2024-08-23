@@ -8,14 +8,14 @@ This schema describes the relational `📇 OperationsDB` of the AstroBookings pl
 erDiagram
 
     Traveler {
-        int user_id PK,FK
+        string user_id PK,FK
         string contact_phone
         string emergency_contact
         json travel_preferences
     }
 
     Agency {
-        int user_id PK,FK
+        string user_id PK,FK
         string name
         string description
         string tax_id
@@ -24,17 +24,17 @@ erDiagram
     }
 
     Rocket {
-        int id PK
-        int agency_id FK
+        string id PK
+        string agency_id FK
         string name
         int capacity
         enum range
     }
 
     Launch {
-        int id PK
-        int agency_id FK
-        int rocket_id FK
+        string id PK
+        string agency_id FK
+        string rocket_id FK
         datetime launch_on
         string destination
         decimal price_per_seat
@@ -42,9 +42,9 @@ erDiagram
     }
 
     Booking {
-        int id PK
-        int traveler_id FK
-        int launch_id FK
+        string id PK
+        string traveler_id FK
+        string launch_id FK
         int number_of_seats
         decimal total_price
         datetime booked_at
@@ -52,9 +52,9 @@ erDiagram
     }
 
     Invoice {
-        int id PK
-        int agency_id FK
-        int launch_id FK
+        string id PK
+        string agency_id FK
+        string launch_id FK
         decimal amount
         string legal_number
         datetime issued_on
@@ -62,8 +62,8 @@ erDiagram
     }
 
     Payment {
-        int id PK
-        int invoice_id FK
+        string id PK
+        string invoice_id FK
         decimal amount
         datetime paid_on
         enum status
@@ -83,13 +83,9 @@ erDiagram
 
 ### Travelers Table
 
-This schema describes the relational `📇 OperationsDB` of the AstroBookings platform.
-
-### Travelers Table
-
 ```sql
 CREATE TABLE IF NOT EXISTS travelers (
-  user_id BIGINT PRIMARY KEY,
+  user_id TEXT PRIMARY KEY,
   contact_phone TEXT,
   emergency_contact TEXT,
   travel_preferences JSON
@@ -100,7 +96,7 @@ CREATE TABLE IF NOT EXISTS travelers (
 
 ```sql
 CREATE TABLE IF NOT EXISTS agencies (
-  user_id BIGINT PRIMARY KEY,
+  user_id TEXT PRIMARY KEY,
   name TEXT NOT NULL,
   description TEXT,
   tax_id TEXT NOT NULL,
@@ -113,8 +109,8 @@ CREATE TABLE IF NOT EXISTS agencies (
 
 ```sql
 CREATE TABLE IF NOT EXISTS rockets (
-  id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-  agency_id BIGINT NOT NULL REFERENCES agencies(user_id),
+  id TEXT PRIMARY KEY DEFAULT gen_random_uuid(),
+  agency_id TEXT NOT NULL REFERENCES agencies(user_id),
   name TEXT NOT NULL,
   capacity INT DEFAULT 8,
   range TEXT CHECK (range IN ('low-earth-orbit', 'geostationary', 'interplanetary'))
@@ -125,9 +121,9 @@ CREATE TABLE IF NOT EXISTS rockets (
 
 ```sql
 CREATE TABLE IF NOT EXISTS launches (
-  id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-  agency_id BIGINT NOT NULL REFERENCES agencies(user_id),
-  rocket_id BIGINT NOT NULL REFERENCES rockets(id),
+  id TEXT PRIMARY KEY DEFAULT gen_random_uuid(),
+  agency_id TEXT NOT NULL REFERENCES agencies(user_id),
+  rocket_id TEXT NOT NULL REFERENCES rockets(id),
   launch_on DATE NOT NULL,
   destination TEXT NOT NULL,
   price_per_seat NUMERIC NOT NULL,
@@ -139,9 +135,9 @@ CREATE TABLE IF NOT EXISTS launches (
 
 ```sql
 CREATE TABLE bookings (
-  id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-  traveler_id BIGINT NOT NULL REFERENCES travelers(user_id),
-  launch_id BIGINT NOT NULL REFERENCES launches(id),
+  id TEXT PRIMARY KEY DEFAULT gen_random_uuid(),
+  traveler_id TEXT NOT NULL REFERENCES travelers(user_id),
+  launch_id TEXT NOT NULL REFERENCES launches(id),
   number_of_seats INT DEFAULT 1,
   booked_at TIMESTAMP DEFAULT NOW(),
   status TEXT CHECK (status IN('reserved', 'cancelled', 'launched', 'aborted'))
@@ -152,9 +148,9 @@ CREATE TABLE bookings (
 
 ```sql
 CREATE TABLE invoices (
-  id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-  agency_id BIGINT REFERENCES agencies(user_id),
-  launch_id BIGINT REFERENCES launches(id),
+  id TEXT PRIMARY KEY DEFAULT gen_random_uuid(),
+  agency_id TEXT REFERENCES agencies(user_id),
+  launch_id TEXT REFERENCES launches(id),
   amount NUMERIC NOT NULL,
   legal_number TEXT NOT NULL,
   issued_on DATE DEFAULT NOW(),
@@ -166,10 +162,10 @@ CREATE TABLE invoices (
 
 ```sql
 CREATE TABLE payments (
-  id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-  invoice_id BIGINT NOT NULL REFERENCES invoices(id),
+  id TEXT PRIMARY KEY DEFAULT gen_random_uuid(),
+  invoice_id TEXT NOT NULL REFERENCES invoices(id),
   amount NUMERIC,
-  paid_on DATE,
+  paid_on DATE DEFAULT NOW(),
   status TEXT CHECK (status IN ('paid', 'failed'))
 );
 ```

@@ -7,7 +7,7 @@ This schema describes the documental `📇 SystemDB` of the AstroBookings platfo
 ```mermaid
 erDiagram
     User {
-        int id PK
+        string id PK
         string email UK
         string password_hash
         string name
@@ -15,18 +15,18 @@ erDiagram
     }
 
     Notification {
-        int id PK
-        int user_id FK
+        string id PK
+        string user_id FK
         string message
         datetime timestamp
         enum status
     }
 
     EntryLog {
-        int id PK
+        string id PK
         string entity_type
-        int entity_id FK
-        int user_id FK
+        string entity_id FK
+        string user_id FK
         datetime timestamp
         string level
         string message
@@ -34,10 +34,10 @@ erDiagram
     }
 
     JobQueue {
-        int id PK
+        string id PK
         string job_type
         string entity_type
-        int entity_id
+        string entity_id
         datetime created_at
         datetime executed_at
         json data
@@ -125,6 +125,7 @@ db.createCollection("notifications", {
   },
 });
 db.notifications.createIndex({ id: 1 }, { unique: true });
+db.notifications.createIndex({ status: 1 });
 ```
 
 ### EntryLogs Collection
@@ -185,16 +186,7 @@ db.createCollection("job_queue", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      required: [
-        "id",
-        "job_type",
-        "entity_type",
-        "entity_id",
-        "status",
-        "created_at",
-        "executed_at",
-        "data",
-      ],
+      required: ["id", "job_type", "entity_type", "entity_id", "status", "created_at", "data"],
       properties: {
         id: {
           bsonType: "string",
@@ -222,7 +214,7 @@ db.createCollection("job_queue", {
         },
         executed_at: {
           bsonType: "date",
-          description: "must be a date and is required",
+          description: "must be a date",
         },
         data: {
           bsonType: "object",
