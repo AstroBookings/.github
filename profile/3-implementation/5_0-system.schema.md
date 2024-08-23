@@ -8,7 +8,7 @@ This schema describes the documental `📇 SystemDB` of the AstroBookings platfo
 erDiagram
     User {
         int id PK
-        string email
+        string email UK
         string password_hash
         string name
         enum role
@@ -55,12 +55,17 @@ erDiagram
 ### Users Collection
 
 ```js
+db.getCollection("users").drop();
 db.createCollection("users", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      required: ["email", "password_hash", "name", "role"],
+      required: ["id", "email", "password_hash", "name", "role"],
       properties: {
+        id: {
+          bsonType: "string",
+          description: "must be an string and is required",
+        },
         email: {
           bsonType: "string",
           description: "must be a string and is required",
@@ -81,17 +86,24 @@ db.createCollection("users", {
     },
   },
 });
+db.users.createIndex({ id: 1 }, { unique: true });
+db.users.createIndex({ email: 1 }, { unique: true });
 ```
 
 ### Notifications Collection
 
 ```js
+db.getCollection("notifications").drop();
 db.createCollection("notifications", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      required: ["userId", "message", "timestamp", "status"],
+      required: ["id", "userId", "message", "timestamp", "status"],
       properties: {
+        id: {
+          bsonType: "string",
+          description: "must be an string and is required",
+        },
         userId: {
           bsonType: "int",
           description: "must be an integer and is required",
@@ -112,17 +124,23 @@ db.createCollection("notifications", {
     },
   },
 });
+db.notifications.createIndex({ id: 1 }, { unique: true });
 ```
 
 ### EntryLogs Collection
 
 ```js
+db.getCollection("entry_log").drop();
 db.createCollection("entry_log", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      required: ["level", "message", "timestamp"],
+      required: ["id", "level", "message", "timestamp"],
       properties: {
+        id: {
+          bsonType: "string",
+          description: "must be an string and is required",
+        },
         entityType: {
           bsonType: "string",
           description: "must be a string",
@@ -155,16 +173,20 @@ db.createCollection("entry_log", {
     },
   },
 });
+db.entry_log.createIndex({ id: 1 }, { unique: true });
+db.entry_log.createIndex({ level: 1 });
 ```
 
 ### JobsQueue Collection
 
 ```js
+db.getCollection("job_queue").drop();
 db.createCollection("job_queue", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
       required: [
+        "id",
         "job_type",
         "entity_type",
         "entity_id",
@@ -174,6 +196,10 @@ db.createCollection("job_queue", {
         "data",
       ],
       properties: {
+        id: {
+          bsonType: "string",
+          description: "must be an string and is required",
+        },
         job_type: {
           bsonType: "string",
           description: "must be a string and is required",
@@ -206,4 +232,6 @@ db.createCollection("job_queue", {
     },
   },
 });
+db.job_queue.createIndex({ id: 1 }, { unique: true });
+db.job_queue.createIndex({ status: 1 });
 ```

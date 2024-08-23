@@ -2,13 +2,15 @@
 
 > Sample project for teaching full-stack development with modern technology and proven best practices.
 
-## 📡 Company mission
+### Company mission
 
-**🚀 AstroBookings** is a fictitious **space tourism** company that wants a platform for rocket _agencies_ to offer _bookings_ for their launches to _travelers_ who want to fly into space.
+**🚀 AstroBookings** is a fictitious space tourism company that wants a platform for rocket _agencies_ to offer _bookings_ for their launches to _travelers_ who want to fly into space.
 
-## 🛰️ The project
+## 📡 The project
 
-Create a solution for [**🚀 AstroBookings**](https://github.com/AstroBookings) financial and IT employees, and also give access to agencies and travelers.
+Create a solution for financial and IT employees, and also give access to agencies and travelers in order to manage their launches, bookings and financial operations.
+
+- [0. Project Summary Briefing](./0-project.briefing.md)
 
 ### 📋 Requirements
 
@@ -18,21 +20,19 @@ Create a solution for [**🚀 AstroBookings**](https://github.com/AstroBookings)
 - [Financial requirements from the CFO](./0-requirements/4-AstroBookings-Financial_requirements-CFO-letter.md)
 - [Technical requirements from the CTO](./0-requirements/5-AstroBookings-Technical_requirements-CTO-letter.md)
 
-## 🧑‍💻 The Solution
+## 🛰️ The Solution
 
 The solution is a set of web applications made with `Angular` that consume several REST APIs made with `NestJS`. Data is stored in `Postgres` and `MongoDB` databases.
 
-- [0. Project Summary Briefing](./0-project.briefing.md)
-
 ### 🧑‍🔬 Analysis
 
-- [1. Detailed Domain requirements](./1-analysis/1-domain.requirements.md)
-- [2. System requirements](./1-analysis/2-system.requirements.md)
+- [1. Detailed Domain Requirements](./1-analysis/1-domain.requirements.md)
+- [2. System Requirements](./1-analysis/2-system.requirements.md)
 
-## 🎨 Design
+### 🎨 Design
 
-- [1. System architecture](./2-design/2-system.architecture.md)
-- [2. Data model](./2-design/3-model.erd.md)
+- [1. System Architecture](./2-design/2-system.architecture.md)
+- [2. Data Model](./2-design/3-model.erd.md)
 
 #### Domain specifics
 
@@ -44,15 +44,15 @@ The solution is a set of web applications made with `Angular` that consume sever
 - [5. Data Synchronization](./2-design/4_5-data-synchronization.domain.md)
 - [6. Monitoring](./2-design/4_6-system-monitoring.domain.md)
 
-## 🚀 Implementation
+### 🧑‍💻 Implementation
 
-### 📇 DataBase schemas
+#### DataBase schemas
 
 - [1. SystemDB schema](./3-implementation/5_0-system.schema.md)
 - [2. OperationsDB schema](./3-implementation/5_1-operations.schema.md)
 - [3. CacheDB schema](./3-implementation/5_2-cache.schema.md)
 
-### 📦 API
+#### API
 
 - [0. Authentication API](./3-implementation/6_0-authentication.api.md)
 
@@ -70,7 +70,7 @@ Documentation relative to the project (requirements, design, coding guides, user
 
 I am Alberto Basalo, a seasoned (**LII** years old, almost from the Roman numerals era 🏛️) advisor, consultor and instructor for programmers.
 
-I am focused on coding best practices, testing, and software architecture, with a special bias for the JavaScript ecosystem.
+I am focused on coding best practices, testing, and software architecture, with a special bias for the `TypeScript` ecosystem.
 
 I am glad to take you with me, hope I can help you to _develop your dream trip._
 
