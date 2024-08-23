@@ -8,7 +8,7 @@ The portal for Astro Bookings Clean Development
 
 ## [Go to Astro Bookings Core Documentation](https://github.com/AstroBookings)
 
-![Astro Bookings Logo](./AstroBookings.png)
+![Astro Bookings Logo](./profile/AstroBookings.png)
 
 <!-- ## [Astro Bookings Project wiki](https://github.com/AstroBookings/.github/wiki/Astro-Bookings-Community-Development)
 

@@ -58,7 +58,7 @@ The solution is a set of web applications made with `Angular` that consume sever
 
 ---
 
-![Astro Bookings Logo](../AstroBookings.png)
+![Astro Bookings Logo](./AstroBookings.png)
 
 <!-- ## [📚 Project wiki](https://github.com/AstroBookings/.github/wiki)
 
