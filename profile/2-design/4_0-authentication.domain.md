@@ -2,9 +2,15 @@
 
 > Timestamp: 2024-08-20 21:30:00 UTC
 
-The Authentication domain in AstroBookings ensures secure access management for travelers, agencies, and employees in a high-stakes space travel platform. It addresses the challenges of unauthorized access prevention and secure session management across diverse user roles.
+The **Authentication domain in AstroBookings** ensures secure access management for travelers, agencies, and employees in a high-stakes space travel platform. It addresses the challenges of unauthorized access prevention and secure session management across diverse user roles.
 
-Our solution implements JSON Web Tokens (JWT) for stateless authentication, providing secure registration, login processes, and role-based access control. This approach enhances system scalability and security while offering a seamless user experience.
+Our solution implements `JSON Web Tokens` (JWT) for stateless authentication, providing secure registration, login processes, and role-based access control. This approach enhances system scalability and security while offering a seamless user experience.
+
+The API service will be responsible for generate and validate those tokens, while the web application will handle user interactions.
+
+All other web applications will redirect anonymous users to the AuthWeb service to handle the authentication process, and receive a JWT token to access the system.
+
+All other API services will use the SystemAPI service to validate the user's token received in the request, and allow or deny access to the requested resource.
 
 ## User Stories
 
@@ -104,12 +110,14 @@ This diagram illustrates the interfaces between the components involved in the A
    - Represents the base entity for all system users.
    - Contains fields such as id, email, password_hash, name, and role.
 
-2. `Traveler`:
+> Not directly related to the authentication domain but relevant for user management.
+
+1. `Traveler`:
 
    - Specialization of User entity for clients booking space travels.
    - Inherits from User and may contain additional fields specific to travelers.
 
-3. `Agency`:
+2. `Agency`:
 
    - Specialization of User entity for space agencies offering launches.
    - Inherits from User and may contain additional fields specific to agencies.
