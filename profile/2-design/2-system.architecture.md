@@ -14,17 +14,17 @@
 
 ### 🧑‍💼 API Services
 
-0. `🧑‍💼 SystemAPI`: Handles authentication, authorization, and system-wide operations
-1. `🧑‍💼 AgencyAPI`: Manages agency profiles and launches
-2. `🧑‍💼 BookingAPI`: Handles seat reservations and cancellations
-3. `🧑‍💼 FinanceAPI`: Manages invoicing and payments
-4. `🧑‍💼 NotifyAPI`: Handles email notifications
+1. `🧑‍💼 SystemAPI`: Handles, authorization, synchronization and system-wide logs operations
+2. `🧑‍💼 AgencyAPI`: Manages agency profiles and launches
+3. `🧑‍💼 BookingAPI`: Handles seat reservations and cancellations
+4. `🧑‍💼 FinanceAPI`: Manages invoicing and payments
+5. `🧑‍💼 NotifyAPI`: Handles email notifications
 
 ### 📇 Databases
 
-0. `📇 SystemDB`: Stores user profiles, authentication data, and system logs
-1. `📇 OperationsDB`: Stores structured data for bookings, launches, and financial transactions
-2. `📇 CacheDB`: Provides quick data access for frequently requested information
+1. `📇 SystemDB`: Stores user authentication data, system logs and job queues.
+2. `📇 OperationsDB`: Stores structured data for bookings, launches, and financial transactions
+3. `📇 CacheDB`: Provides quick data access for frequently requested information
 
 ### 👽 External Services
 
@@ -292,12 +292,12 @@ Built with **MongoDB** to handle diverse, document-based data structures with fl
 
 #### ⬇️ Consumes data from:
 
-- `🧑‍💼 SystemAPI`: User registration, profile updates, and system logs
+- `🧑‍💼 SystemAPI`: User registration, sync updates, and system logs
 - `🧑‍💼 NotifyAPI`: Notification queue entries
 
 #### ⬆️ Provides data for:
 
-- `🧑‍💼 SystemAPI`: User authentication, profile retrieval, and system log access
+- `🧑‍💼 SystemAPI`: User authentication, sync retrieval, and system log access
 - `🧑‍💼 NotifyAPI`: Notification queue management
 
 ### 1. 📇 OperationsDB
@@ -308,16 +308,17 @@ Implemented using **PostgreSQL** for its robust handling of complex relational d
 
 #### ⬇️ Consumes data from:
 
+- `🧑‍💼 SystemAPI`: Booking updates from synchronization jobs
 - `🧑‍💼 AgencyAPI`: Agency profiles, rocket information, and launch schedules
-- `🧑‍💼 BookingAPI`: Booking details and seat allocations
 - `🧑‍💼 FinanceAPI`: Financial transactions and invoice data
+- `🧑‍💼 NotifyAPI`: Stores notifications and updates
 
 #### ⬆️ Provides data for:
 
 - `🧑‍💼 SystemAPI`: System-wide operational data access
 - `🧑‍💼 AgencyAPI`: Agency and launch information retrieval and updates
-- `🧑‍💼 BookingAPI`: Booking operations and seat availability management
 - `🧑‍💼 FinanceAPI`: Financial data for reporting and invoicing
+- `🧑‍💼 NotifyAPI`: Pending notifications and reports
 
 ### 2. 📇 CacheDB
 
@@ -327,12 +328,13 @@ Can be implemented using either **Redis** or **MongoDB**, depending on specific 
 
 #### ⬇️ Consumes data from:
 
-- `🧑‍💼 SystemAPI`: Frequently accessed system-wide data
-- `🧑‍💼 BookingAPI`: Current seat availability and pricing information
+- `🧑‍💼 SystemAPI`: Launch updates from synchronization jobs
+- `🧑‍💼 BookingAPI`: New bookings or updates form traveler activity.
 
 #### ⬆️ Provides data for:
 
-- `🧑‍💼 SystemAPI`:
+- `🧑‍💼 SystemAPI`: System-wide operational data access
+- `🧑‍💼 BookingAPI`: Current seat availability and pricing information
 
 ---
 
