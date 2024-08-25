@@ -4,11 +4,11 @@
 
 AstroBookings is a comprehensive platform connecting space agencies with travelers for commercial space flights. It manages rocket launches, bookings, payments, and communications, ensuring a seamless experience for agencies and travelers while maintaining robust backend operations and monitoring.
 
-The project is divided into seven main `domains`: `Authentication`, `Agency Management`, `Booking Management`, `Financial Operations`, `Notification System`, `Data Synchronization`, and `System Monitoring`. Each domain has specific requirements that cater to different user roles and system functionalities.
+The project is divided into seven main **domains**: `Authentication`, `Agency Management`, `Booking Management`, `Financial Operations`, `Notification System`, `Data Synchronization`, and `System Monitoring`. Each domain has specific requirements that cater to different user roles and system functionalities.
 
-The solution will be developed using a microservices architecture, with separate components for web applications, API services, databases, and external services. This modular approach combined with modern `technologies` like `Angular`, `NestJS`, `Postgres`, and `MongoDB`, will allow for better scalability, maintainability, and flexibility in the system.
+The solution will be developed using a microservices architecture, with separate components for web applications, API services, databases, and external services. This modular approach combined with modern **technologies** like `Angular`, `NestJS`, `Postgres`, and `MongoDB`, will allow for better scalability, maintainability, and flexibility in the system.
 
-The common vocabulary and understanding of the system's requirements is based on the following domain `entities`: `User`, `Traveler`, `Agency`, `Rocket`, `Launch`, `Booking`, `Invoice`, `Payment`, `Notification`, `EntryLog`, and `JobQueue`. These entities represent the core concepts of the space travel booking system and define the interactions between users, agencies, launches, and financial transactions.
+The common vocabulary and understanding of the system's requirements is based on the following domain **entities**: `User`, `Traveler`, `Agency`, `Rocket`, `Launch`, `Booking`, `Invoice`, `Payment`, `Notification`, `EntryLog`, and `JobQueue`. These entities represent the core concepts of the space travel booking system and define the interactions between users, agencies, launches, and financial transactions.
 
 ## Requirements by Domain
 
@@ -22,20 +22,20 @@ The common vocabulary and understanding of the system's requirements is based on
 
 ### 1. Agency Management
 
-1. Create and manage agency profile
-2. Add and manage rockets
-3. Schedule new launches
+1. Create and manage agency profile with tax information
+2. Add and manage rockets with capacity and range details
+3. Schedule new launches with destination, date, and price per seat
 4. View the occupancy of scheduled launches
 5. Delay, abort, fail or mark as successful scheduled launches
-6. View a report of bookings for successful launches
+6. View a financial report of bookings for launches
 
 ### 2. Booking Management
 
 1. View available launches as an anonymous visitor
-2. Register as a traveler with contact and tax information
+2. Register as a traveler with contact information
 3. Book seats on a launch as a registered traveler
 4. View updates on the status of booked launches
-5. Cancel booking and receive a refund if eligible
+5. Cancel booking and see a refund if eligible
 
 ### 3. Financial Operations
 
@@ -47,9 +47,9 @@ The common vocabulary and understanding of the system's requirements is based on
 
 ### 4. Notification System
 
-1. Receive email notifications about launches for agencies
-2. Receive email notifications about bookings for travelers
-3. Receive exclusive notifications about new launches for VIP travelers
+1. Send email notifications about launches for agencies
+2. Send email notifications about bookings for travelers
+3. Send exclusive notifications about new launches for VIP travelers
 4. View the status of the notification queue as an IT employee
 5. Change the status of notifications as an IT employee
 
@@ -79,7 +79,7 @@ All web applications are built with **Angular**.
 
 ### 🧑‍💼 API Services
 
-0. `🧑‍💼 SystemAPI`: Handles authentication, authorization, and system-wide operations
+0. `🧑‍💼 SystemAPI`: Handles authentication, synchronization, monitoring and system-wide operations
 1. `🧑‍💼 AgencyAPI`: Manages agency profiles and launches
 2. `🧑‍💼 BookingAPI`: Handles seat reservations and cancellations
 3. `🧑‍💼 FinanceAPI`: Manages invoicing and payments
@@ -89,11 +89,11 @@ All API services are developed using **NestJS**.
 
 ### 📇 Databases
 
-0. `📇 SystemDB`: Stores user profiles, authentication data, and system logs
+0. `📇 SystemDB`: Stores user authentication data, synchronization queue, and system logs
 1. `📇 OperationsDB`: Stores structured data for bookings, launches, and financial transactions
-2. `📇 CacheDB`: Provides quick data access for frequently requested information
+2. `📇 CacheDB`: Provides quick data access for public or traveler requested information
 
-Databases use a combination of **Postgres** and **MongoDB**, with **Redis** for caching.
+Databases use a combination of **Postgres** and **MongoDB**, with **Redis** as alternative for queues.
 
 ### 👽 External Services
 
@@ -102,11 +102,11 @@ Databases use a combination of **Postgres** and **MongoDB**, with **Redis** for 
 
 ## Main Entities
 
-1. `User`: Base entity for all system users. Contains common information such as login credentials and contact data.
+1. `User`: Base entity for all system users with login credentials and role.
 2. `Traveler`: Specialization of User. Represents clients who make bookings for space travels.
 3. `Agency`: Specialization of User. Represents space agencies that offer launches.
 4. `Rocket`: Represents spacecraft owned by agencies. Includes details such as capacity and range.
-5. `Launch`: Represents a scheduled space trip. Includes information such as date, destination, and price per seat.
+5. `Launch`: Represents a scheduled space trip. With information such as date, destination, and price per seat.
 6. `Booking`: Represents the reservation of seats on a specific launch made by a traveler.
 7. `Invoice`: Represents charges generated for agencies for completed launches.
 8. `Payment`: Represents payments made by agencies to settle issued invoices.
