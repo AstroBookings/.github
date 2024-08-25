@@ -86,7 +86,7 @@ graph TD
     AgencyAPI -->  OperationsDB
     BookingAPI -->  OperationsDB & CacheDB
     FinanceAPI -->  OperationsDB
-    NotifyAPI -->  SystemDB
+    NotifyAPI -->  OperationsDB
 
     %% API to External Service connections
     NotifyAPI --> EmailSvc
@@ -274,7 +274,7 @@ Built with **NestJS** and **TypeScript** for efficient message handling and deli
 
 #### ⬇️ Consumes:
 
-- `📇 SystemDB`: To manage notification queues and user communication preferences
+- `📇 OperationsDB`: To manage notification queues and user communication preferences
 - `👽 EmailSvc`: To send out email notifications
 
 #### ⬆️ Provides for:
@@ -293,12 +293,10 @@ Built with **MongoDB** to handle diverse, document-based data structures with fl
 #### ⬇️ Consumes data from:
 
 - `🧑‍💼 SystemAPI`: User registration, sync updates, and system logs
-- `🧑‍💼 NotifyAPI`: Notification queue entries
 
 #### ⬆️ Provides data for:
 
 - `🧑‍💼 SystemAPI`: User authentication, sync retrieval, and system log access
-- `🧑‍💼 NotifyAPI`: Notification queue management
 
 ### 1. 📇 OperationsDB
 
@@ -311,6 +309,7 @@ Implemented using **PostgreSQL** for its robust handling of complex relational d
 - `🧑‍💼 SystemAPI`: Booking updates from synchronization jobs
 - `🧑‍💼 AgencyAPI`: Agency profiles, rocket information, and launch schedules
 - `🧑‍💼 FinanceAPI`: Financial transactions and invoice data
+- `🧑‍💼 NotifyAPI`: Notification queue entries
 - `🧑‍💼 NotifyAPI`: Stores notifications and updates
 
 #### ⬆️ Provides data for:
