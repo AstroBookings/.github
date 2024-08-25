@@ -8,7 +8,7 @@ This approach allows for better scalability, maintainability, and flexibility in
 
 ## Data storage
 
-Operational data will be stored in a **relational** database, while user profiles, authentication data, system logs, notification queues, and synchronization operations will be stored in a **document** database.
+Operational data (launches, bookings, invoices and notifications) will be stored in a **relational** database, while user profiles, authentication data, system logs, and synchronization operations will be stored in a **document** database.
 
 A cache database will provide quick data access for the public website and traveler portal.
 

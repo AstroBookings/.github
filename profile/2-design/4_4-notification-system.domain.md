@@ -48,7 +48,7 @@ The Notification System domain in AstroBookings manages communication with users
 
 ### 📇 Databases
 
-- `📇 SystemDB`: Stores notification queue and user communication preferences.
+- `📇 OperationsDB`: Stores notification queue and user communication preferences.
 
 ### 👽 External Services
 
@@ -69,7 +69,7 @@ graph TD
     end
 
     subgraph Databases[ ]
-        SystemDB[(0 - SystemDB)]
+        OperationsDB[(1 - OperationsDB)]
     end
 
     subgraph ExternalServices[ ]
@@ -86,7 +86,7 @@ graph TD
     NotifyAPI --> SystemAPI
 
     %% API to Database connections
-    NotifyAPI --> SystemDB
+    NotifyAPI --> OperationsDB
 
     %% API to External Service connections
     NotifyAPI --> EmailSvc
@@ -98,53 +98,75 @@ graph TD
     classDef ext fill:#E6E6FA,stroke:#333,stroke-width:2px;
     class SystemWeb web;
     class NotifyAPI api;
-    class SystemDB db;
+    class OperationsDB db;
 ```
 
 This diagram illustrates the interfaces between the components involved in the Notification System domain:
 
 1. SystemWeb interacts with NotifyAPI for notification management.
-2. NotifyAPI interacts with SystemDB for storing and retrieving notification data.
+2. NotifyAPI interacts with OperationsDB for storing and retrieving notification data.
 3. NotifyAPI connects to the external EmailSvc for sending email notifications.
 
 ## Related Entities
 
-1. `User`:
-
-   - Represents system users such as agencies, travelers, and employees.
-   - Contains fields such as id, email, password_hash, name, role.
-
-2. `Notification`:
+1. `Notification`:
 
    - Represents messages sent to system users about various events.
-   - Contains fields such as id, user_id, message, timestamp, status.
+   - Contains fields such as id, recipient_email, subject, message, timestamp, status.
+
+> Other related entities include `Agency` or `Traveler`, and `Launch` , `Booking` or `Invoice`, which are not directly involved in the notification system but are relevant for sending notifications to the respective users.
+
+2. `User`:
+
+   - Represents system users as a generalization for agencies or travelers
+   - Contains fields such as id, email, name, role.
+
+3. `Launch`, `Booking`, or `Invoice`:
+
+   - Relevant entities related to the events for which notifications are sent.
+   - Provide context for the notifications being sent.
+
+4. `Template`:
+
+   - Contains predefined message templates for notifications.
+   - Includes fields such as id, name, subject, message.
 
 ### Entity Relationship Diagram
 
 ```mermaid
 erDiagram
     User {
-        int id PK
+        string id PK
         string email
-        string password_hash
         string name
         enum role
     }
 
     Notification {
-        int id PK
-        int user_id FK
+        string id PK
+        string user_id FK
+        string recipient_email
+        string subject
         string message
         datetime timestamp
         enum status
     }
 
+    Template {
+        string id PK
+        string name
+        string subject
+        string message
+    }
+
    User ||--o{ Notification : "can receive"
+   Template ||--o{ Notification : "can be used in"
 ```
 
 This ERD shows the following relationships:
 
 - A `User` can have multiple `Notification` messages.
+- A `Template` can be used in multiple `Notification` messages.
 
 ---
 

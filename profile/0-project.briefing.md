@@ -90,7 +90,7 @@ All API services are developed using **NestJS**.
 ### 📇 Databases
 
 0. `📇 SystemDB`: Stores user authentication data, synchronization queue, and system logs
-1. `📇 OperationsDB`: Stores structured data for bookings, launches, and financial transactions
+1. `📇 OperationsDB`: Stores structured data for bookings, launches, notifications and financial transactions
 2. `📇 CacheDB`: Provides quick data access for public or traveler requested information
 
 Databases use a combination of **Postgres** and **MongoDB**, with **Redis** as alternative for queues.
