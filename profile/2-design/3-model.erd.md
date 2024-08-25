@@ -84,10 +84,12 @@
 
 ## Entity-Relationship Diagram
 
+> All **identifiers** are of type `string` to allow for flexibility and the database independence. Should be generated as UUIDs or similar (`snowflake` preferable) by the API.
+
 ```mermaid
 erDiagram
     User {
-        int id PK
+        string id PK
         string email
         string password_hash
         string name
@@ -95,14 +97,14 @@ erDiagram
     }
 
     Traveler {
-        int user_id PK,FK
+        string user_id PK,FK
         string contact_phone
         string emergency_contact
         json travel_preferences
     }
 
     Agency {
-        int user_id PK,FK
+        string user_id PK,FK
         string description
         string contact_info
         string legal_name
@@ -111,17 +113,17 @@ erDiagram
     }
 
     Rocket {
-        int id PK
-        int agency_id FK
+        string id PK
+        string agency_id FK
         string name
         int capacity
         enum range
     }
 
     Launch {
-        int id PK
-        int agency_id FK
-        int rocket_id FK
+        string id PK
+        string agency_id FK
+        string rocket_id FK
         datetime date
         string destination
         decimal price_per_seat
@@ -129,54 +131,54 @@ erDiagram
     }
 
     Booking {
-        int id PK
-        int traveler_id FK
-        int launch_id FK
+        string id PK
+        string traveler_id FK
+        string launch_id FK
         int number_of_seats
         decimal total_price
         enum status
     }
 
     Invoice {
-        int id PK
+        string id PK
         string number
-        int agency_id FK
-        int launch_id FK
+        string agency_id FK
+        string launch_id FK
         decimal amount
         enum status
         datetime date
     }
 
     Payment {
-        int id PK
-        int invoice_id FK
+        string id PK
+        string invoice_id FK
         decimal amount
         datetime date
         enum status
     }
 
     Notification {
-        int id PK
-        int user_id FK
+        string id PK
+        string user_id FK
         string message
         datetime timestamp
         enum status
     }
 
     EntryLog {
-        int id PK
+        string id PK
         string entity_type
-        int entity_id
+        string entity_id
         string action
         datetime timestamp
         string details
     }
 
     JobQueue {
-        int id PK
+        string id PK
         string job_type
         string entity_type
-        int entity_id
+        string entity_id
         enum status
         datetime created_at
         datetime executed_at
