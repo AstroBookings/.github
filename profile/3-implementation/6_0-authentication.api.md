@@ -122,22 +122,23 @@ To create the project, run the following command:
 ```shell
 npm i -g @nestjs/cli
 nest new SystemAPI
+cd system-api
 npm i @nestjs/mapped-types class-validator class-transformer
-npm i -s @mikro-orm/core @mikro-orm/nestjs @mikro-orm/mongodb mongodb
+npm i @mikro-orm/core @mikro-orm/nestjs @mikro-orm/mongodb mongodb
 npm i @nestjs/jwt @nestjs/passport passport passport-jwt
 npm i snowyflake
 ```
 
 Core artifacts and and shared module.
 
+> Will be part of a library in the future
+
 ```shell
 nest g filter core/all-exceptions --flat --no-spec
 nest g middleware core/logger --flat --no-spec
 
 nest g module shared
-nest g service shared/hash-service --flat
-nest g service shared/id-service --flat
-nest g service shared/token-service --flat
+nest g service shared/id --flat
 ```
 
 ### API Authentication Endpoints
@@ -155,7 +156,8 @@ So for the implementation of the `Authentication` domain, we need to create a mo
 ```shell
 nest g module api/authentication
 nest g controller api/authentication
-nest g service api/authentication
+nest g module api/authentication/services/authentication-services --flat
+nest g service api/authentication/services/authentication --flat
 ```
 
 ## Data Model for DTOs
@@ -172,13 +174,7 @@ nest g class api/authentication/models/user-token.type --flat --no-spec
 ```
 
 ```typescript
-import {
-  IsEmail,
-  IsNotEmpty,
-  IsString,
-  MinLength,
-  IsEnum,
-} from "class-validator";
+import { IsEmail, IsNotEmpty, IsString, MinLength, IsEnum } from "class-validator";
 
 export type Role = "traveler" | "agency" | "financial" | "it";
 
@@ -242,7 +238,7 @@ Those are the required entities for the API with `TypeORM` interacting with the 
 - Contains fields such as id, email, password_hash, name, and role.
 
 ```shell
-nest g class authentication/models/user.entity --flat --no-spec
+nest g class authentication/services/user.entity --flat --no-spec
 ```
 
 ```typescript
