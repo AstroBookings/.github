@@ -90,6 +90,11 @@ export type Notification = {
   subject: string;
   message: string;
 };
+
+/**
+ * Notification status enum
+ */
+export type NotificationStatus = "pending" | "sent" | "failed";
 ```
 
 ## Data Model for Entities
@@ -102,6 +107,7 @@ Those are the required entities for the API with `TypeORM` interacting with the 
 
 ```shell
 nest g class api/notification/services/notification.entity --flat --no-spec
+nest g class api/notification/services/template.entity --flat --no-spec
 ```
 
 ```typescript
@@ -119,11 +125,23 @@ export class NotificationEntity {
   @PrimaryKey()
   id!: string;
 
-  /**
-   * User ID associated with the notification
-   */
-  @Property()
-  userId!: string;
+  @ManyToOne(() => TemplateEntity)
+  template!: TemplateEntity;
+
+  @ManyToOne(() => AgencyEntity)
+  agency!: AgencyEntity;
+
+  @ManyToOne(() => LaunchEntity)
+  launch!: LaunchEntity;
+
+  @ManyToOne(() => TravelerEntity)
+  traveler!: TravelerEntity;
+
+  @ManyToOne(() => BookingEntity)
+  booking!: BookingEntity;
+
+  @ManyToOne(() => InvoiceEntity)
+  invoice!: InvoiceEntity;
 
   /**
    * Recipient's email address
@@ -152,17 +170,8 @@ export class NotificationEntity {
   /**
    * Status of the notification
    */
-  @Enum(() => NotificationStatus)
+  @Property({ type: "text" })
   status!: NotificationStatus;
-}
-
-/**
- * Notification status enum
- */
-export enum NotificationStatus {
-  PENDING = "pending",
-  SENT = "sent",
-  FAILED = "failed",
 }
 
 /**
@@ -170,4 +179,24 @@ export enum NotificationStatus {
  * @description Type definition for the Notification entity
  */
 export type NotificationEntityData = Omit<NotificationEntity, "id">;
+
+@Entity({ tableName: "templates" })
+export class TemplateEntity {
+  @PrimaryKey()
+  id!: string;
+
+  @Property()
+  name!: string;
+
+  @Property()
+  subject!: string;
+
+  @Property()
+  message!: string;
+
+  @OneToMany(() => NotificationEntity, (notification) => notification.template)
+  notifications!: NotificationEntity[];
+}
+
+export type TemplateEntityData = Omit<TemplateEntity, "id">;
 ```

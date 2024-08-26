@@ -144,7 +144,12 @@ erDiagram
 
     Notification {
         string id PK
-        string user_id FK
+        string template_id FK
+        string agency_id FK
+        string launch_id FK
+        string traveler_id FK
+        string booking_id FK
+        string invoice_id FK
         string recipient_email
         string subject
         string message
@@ -160,6 +165,9 @@ erDiagram
     }
 
    User ||--o{ Notification : "can receive"
+   Booking o|--|{ Notification : "triggers"
+   Invoice o|--|{ Notification : "triggers"
+   Launch o|--|{ Notification : "triggers"
    Template ||--o{ Notification : "can be used in"
 ```
 
