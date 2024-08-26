@@ -44,15 +44,15 @@ The solution is a set of web applications made with `Angular` that consume sever
 - [5. Data Synchronization](./2-design/4_5-data-synchronization.domain.md)
 - [6. Monitoring](./2-design/4_6-system-monitoring.domain.md)
 
-### 🧑‍💻 Implementation
+## 🧑‍💻 The Implementation
 
-#### DataBase schemas
+### 📇 DataBase schemas
 
 - [1. SystemDB schema](./3-implementation/5_0-system.schema.md)
 - [2. OperationsDB schema](./3-implementation/5_1-operations.schema.md)
 - [3. CacheDB schema](./3-implementation/5_2-cache.schema.md)
 
-#### API Service repositories
+### 🧑‍💼 API Service repositories
 
 - [0. 🧑‍💼 System API](https://github.com/AstroBookings/system_api)
 
