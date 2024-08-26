@@ -20,14 +20,14 @@ Create a solution for financial and IT employees, and also give access to agenci
 - [Financial requirements from the CFO](./0-requirements/4-AstroBookings-Financial_requirements-CFO-letter.md)
 - [Technical requirements from the CTO](./0-requirements/5-AstroBookings-Technical_requirements-CTO-letter.md)
 
-## 🛰️ The Solution
-
-The solution is a set of web applications made with `Angular` that consume several REST APIs made with `NestJS`. Data is stored in `Postgres` and `MongoDB` databases.
-
 ### 🧑‍🔬 Analysis
 
 - [1. Detailed Domain Requirements](./1-analysis/1-domain.requirements.md)
 - [2. System Requirements](./1-analysis/2-system.requirements.md)
+
+## 🛰️ The Solution
+
+The solution is a set of web applications made with `Angular` that consume several REST APIs made with `NestJS`. Data is stored in `Postgres` and `MongoDB` databases.
 
 ### 🎨 Design
 
@@ -52,9 +52,9 @@ The solution is a set of web applications made with `Angular` that consume sever
 - [2. OperationsDB schema](./3-implementation/5_1-operations.schema.md)
 - [3. CacheDB schema](./3-implementation/5_2-cache.schema.md)
 
-#### API
+#### API Service repositories
 
-- [0. Authentication API](./3-implementation/6_0-authentication.api.md)
+- [0. 🧑‍💼 System API](https://github.com/AstroBookings/system_api)
 
 ---
 

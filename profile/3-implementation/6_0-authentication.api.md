@@ -102,15 +102,7 @@ Feature: JWT Validation
     Then the response should have a status code of 200
     And the response should contain a field "user" with the user information
 
-  Scenario: Validate an expired JWT
-    Given the API is available
-    And the user is authenticated
-    And the user has an expired JWT
-    When the user sends a GET request to "/api/authentication/validation"
-    Then the response should have a status code of 401
-    And the response should contain an error message "Token expired"
-
-  Scenario: Validate an invalid JWT
+  Scenario: Validate an invalid or expired JWT
     Given the API is available
     And the user is authenticated
     And the user has an invalid JWT
@@ -131,10 +123,21 @@ To create the project, run the following command:
 npm i -g @nestjs/cli
 nest new SystemAPI
 npm i @nestjs/mapped-types class-validator class-transformer
-npm install mongoose @nestjs/mongoose
 npm i -s @mikro-orm/core @mikro-orm/nestjs @mikro-orm/mongodb mongodb
 npm i @nestjs/jwt @nestjs/passport passport passport-jwt
 npm i snowyflake
+```
+
+Core artifacts and and shared module.
+
+```shell
+nest g filter core/all-exceptions --flat --no-spec
+nest g middleware core/logger --flat --no-spec
+
+nest g module shared
+nest g service shared/hash-service --flat
+nest g service shared/id-service --flat
+nest g service shared/token-service --flat
 ```
 
 ### API Authentication Endpoints
@@ -150,9 +153,9 @@ The following endpoints are available for the `Authentication` domain:
 So for the implementation of the `Authentication` domain, we need to create a module, a controller, a service, and a set of DTOs.
 
 ```shell
-nest g module authentication
-nest g controller authentication
-nest g service authentication
+nest g module api/authentication
+nest g controller api/authentication
+nest g service api/authentication
 ```
 
 ## Data Model for DTOs
@@ -160,12 +163,12 @@ nest g service authentication
 Those are the required DTOs for the API with `NestJs Validation` and `class-validator`:
 
 ```shell
-nest g class authentication/models/register.dto --flat --no-spec
-nest g class authentication/models/login.dto --flat --no-spec
-nest g class authentication/models/token.dto --flat --no-spec
-nest g class authentication/models/user.dto --flat --no-spec
-nest g class authentication/models/error.dto --flat --no-spec
-nest g class authentication/models/user-token.dto --flat --no-spec
+nest g class api/authentication/models/register.dto --flat --no-spec
+nest g class api/authentication/models/login.dto --flat --no-spec
+nest g class api/authentication/models/token.type --flat --no-spec
+nest g class api/authentication/models/user.type --flat --no-spec
+nest g class api/authentication/models/valid-token.type --flat --no-spec
+nest g class api/authentication/models/user-token.type --flat --no-spec
 ```
 
 ```typescript
@@ -205,21 +208,28 @@ export class LoginDto {
   password: string;
 }
 
-export class UserDto {
-  id: number;
+export type User = {
+  id: string;
   name: string;
   email: string;
   role: Role;
-}
+};
 
-export class ErrorDto {
-  message: string;
-}
-
-export class UserTokenDto {
-  user: UserDto;
+export type UserToken = {
+  user: User;
   token: string;
-}
+};
+
+export type TokenPayload = {
+  sub: string;
+  iat: number;
+  exp: number;
+};
+
+export type UserTokenPayload = {
+  user: User;
+  tokenPayload: TokenPayload;
+};
 ```
 
 ## Data Model for Entities
@@ -236,26 +246,40 @@ nest g class authentication/models/user.entity --flat --no-spec
 ```
 
 ```typescript
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+/**
+ * User entity
+ * @description Entity for read/write on users collection
+ */
+@Entity({ collection: "users" })
+export class UserEntity {
+  /**
+   * MongoDB Primary key
+   */
+  @PrimaryKey()
+  _id: string;
 
-@Entity("users")
-export class User {
-  @PrimaryGeneratedColumn()
-  id: number;
+  /**
+   * Unique id for a user, to be used as a reference
+   */
+  @Property()
+  id: string;
 
-  @Column()
+  @Property()
   name: string;
 
-  @Column()
+  @Property({ unique: true })
   email: string;
 
-  @Column({ name: "password_hash" })
+  @Property({ fieldName: "password_hash" })
   passwordHash: string;
 
-  @Column({
-    type: "enum",
-    enum: ["traveler", "agency", "financial", "it"],
-  })
+  @Property({ type: "text" })
   role: Role;
 }
+
+/**
+ * User entity data type
+ * @description Without the MongoDB primary key
+ */
+export type UserEntityData = Omit<UserEntity, "_id">;
 ```
