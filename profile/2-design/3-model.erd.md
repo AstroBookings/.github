@@ -101,7 +101,7 @@ erDiagram
         string email
         string password_hash
         string name
-        enum role (traveler, agency, finance, it)
+        enum role "traveler, agency, finance, it"
     }
 
     Traveler {
@@ -127,7 +127,7 @@ erDiagram
         string agency_id FK
         string name
         int capacity
-        enum range (low_earth, moon, mars)
+        enum range "low_earth, moon, mars"
     }
 
     Launch {
@@ -137,7 +137,7 @@ erDiagram
         datetime date
         string destination
         decimal price_per_seat
-        enum status (scheduled, confirmed, launched, delayed, aborted)
+        enum status "scheduled, confirmed, launched, delayed, aborted"
     }
 
     Booking {
@@ -146,7 +146,7 @@ erDiagram
         string launch_id FK
         int number_of_seats
         decimal total_price
-        enum status (pending, confirmed, canceled)
+        enum status "pending, confirmed, canceled"
     }
 
     Invoice {
@@ -155,7 +155,7 @@ erDiagram
         string agency_id FK
         string launch_id FK
         decimal amount
-        enum status (pending, paid, failed)
+        enum status "pending, paid, failed"
         datetime date
     }
 
@@ -176,12 +176,12 @@ erDiagram
         string message
         json data
         datetime timestamp
-        enum status (pending, read, sent, failed)
+        enum status "pending, read, sent, failed"
     }
 
     EntryLog {
         string id PK
-        string level (info, warning, error)
+        string level "info, warning, error"
         string message
         datetime timestamp
         json data
@@ -189,9 +189,9 @@ erDiagram
 
     JobQueue {
         string id PK
-        string job_type (launch_sync, booking_sync, )
+        enum job_type "launch_sync, booking_sync"
         string source_id
-        enum status (pending, running, completed, failed)
+        enum status "pending, running, completed, failed"
         datetime created_at
         datetime executed_at
         json data
@@ -199,7 +199,7 @@ erDiagram
 
     Template {
         string id PK
-        string event_name (launch_scheduled, launch_confirmed, launch_launched, launch_delayed, launch_aborted, booking_confirmed, booking_canceled, invoice_issued)
+        enum event_name "launch_scheduled, launch_confirmed, launch_launched, launch_delayed, launch_aborted, booking_confirmed, booking_canceled, invoice_issued"
         string subject
         string message
     }
