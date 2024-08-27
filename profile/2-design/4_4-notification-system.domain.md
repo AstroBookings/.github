@@ -211,7 +211,9 @@ This ERD shows the following relationships:
 - A `User` can have multiple `Notification` messages.
 - A `Template` can be used in multiple `Notification` messages.
 
-In order to fill the subject and message fields of the `Notification` entity, we need to use the several entities involved in the booking and launch process, but not directly related to the `Notification` entity itself.
+> [!NOTE]
+>
+> > In order to fill the subject and message fields of the `Notification` entity, we need to use the several entities involved in the booking and launch process, but not directly related to the `Notification` entity itself.
 
 ---
 
