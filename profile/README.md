@@ -56,6 +56,8 @@ The solution is a set of web applications made with `Angular` that consume sever
 
 - [0. 🧑‍💼 System API](https://github.com/AstroBookings/system_api)
 
+- [4. 🧑‍💼 Notify API](https://github.com/AstroBookings/notify_api)
+
 ---
 
 ![Astro Bookings Logo](./AstroBookings.png)
