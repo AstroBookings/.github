@@ -89,16 +89,17 @@ CREATE TABLE templates (
 );
 
 -- Notifications Table
+DROP TABLE IF EXISTS notifications CASCADE;
 CREATE TABLE notifications (
   id TEXT PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id TEXT NOT NULL REFERENCES agencies(user_id),
   template_id TEXT NOT NULL REFERENCES templates(id),
+  user_id TEXT NOT NULL ,
   recipient_name TEXT NOT NULL,
   recipient_email TEXT NOT NULL,
   subject TEXT NOT NULL,
   message TEXT NOT NULL,
   data JSON,
   created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP ,
   status TEXT CHECK (status IN ('pending', 'read', 'sent', 'failed'))
 );

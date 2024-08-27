@@ -210,7 +210,7 @@ CREATE TABLE notifications (
   message TEXT NOT NULL,
   data JSON,
   created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP,
   status TEXT CHECK (status IN ('pending', 'read', 'sent', 'failed'))
 );
 ```
