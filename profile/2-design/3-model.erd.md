@@ -26,7 +26,9 @@
 
 11. `JobQueue`: Represents pending tasks for data synchronization between different parts of the system.
 
-12. `Template`: Represents message templates for notifications.
+> [!NOTE]
+>
+> > This diagram is a simplified version of the real system. There are refinements at implementation level.
 
 ## Relationships
 
@@ -84,11 +86,6 @@
 
     - `Invoice` _is paid by_ `Payment`
     - `Payment` _pays_ `Invoice`
-
-12. Notification _(1 to 0 or many)_ Template
-
-    - `Notification` _uses_ `Template`
-    - `Template` _is used by_ `Notification`
 
 ## Entity-Relationship Diagram
 
@@ -155,15 +152,15 @@ erDiagram
         string agency_id FK
         string launch_id FK
         decimal amount
+        datetime issued_at
         enum status "pending, paid, failed"
-        datetime date
     }
 
     Payment {
         string id PK
         string invoice_id FK
         decimal amount
-        datetime date
+        datetime paid_at
     }
 
     Notification {
@@ -175,7 +172,8 @@ erDiagram
         string subject
         string message
         json data
-        datetime timestamp
+        datetime created_at
+        datetime updated_at
         enum status "pending, read, sent, failed"
     }
 
@@ -197,13 +195,6 @@ erDiagram
         json data
     }
 
-    Template {
-        string *id PK
-        enum event_name "launch_scheduled, launch_confirmed, launch_launched, launch_delayed, launch_aborted, booking_confirmed, booking_canceled, invoice_issued"
-        string subject
-        string message
-    }
-
     User ||--o| Traveler : "is a"
     User ||--o| Agency : "is a"
     User ||--o{ Notification : receives
@@ -215,7 +206,6 @@ erDiagram
     Launch ||--o| Invoice : generates
     Traveler ||--o{ Booking : makes
     Invoice ||--o{ Payment : "is paid by"
-    Template ||--o{ Notification : uses
 ```
 
 ---

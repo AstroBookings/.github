@@ -135,39 +135,74 @@ This diagram illustrates the interfaces between the components involved in the N
 
 ```mermaid
 erDiagram
-    User {
+   User {
         string id PK
         string email
+        string password_hash
         string name
-        enum role
+        enum role "traveler, agency, finance, it"
     }
 
-    Notification {
+    Traveler {
+        string user_id PK,FK
+        string contact_phone
+        string contact_email
+    }
+
+    Agency {
+        string user_id PK,FK
+        string contact_email
+    }
+
+    Launch {
         string id PK
-        string template_id FK
+        string agency_id FK
+        datetime date
+        string destination
+        enum status "scheduled, confirmed, launched, delayed, aborted"
+    }
+
+    Booking {
+        string id PK
+        string traveler_id FK
+        string launch_id FK
+        int number_of_seats
+        decimal total_price
+        enum status "pending, confirmed, canceled"
+    }
+
+    Invoice {
+        string id PK
+        string number
         string agency_id FK
         string launch_id FK
-        string traveler_id FK
-        string booking_id FK
-        string invoice_id FK
+        decimal amount
+        datetime issued_at
+        enum status "pending, paid, failed"
+    }
+
+     Notification {
+        string id PK
+        string user_id FK
+        string template_id FK
+        string recipient_name
         string recipient_email
         string subject
         string message
-        datetime timestamp
-        enum status
+        json data
+        datetime created_at
+        datetime updated_at
+        enum status "pending, read, sent, failed"
     }
 
     Template {
         string id PK
-        string name
+        enum event_name "launch_scheduled, launch_confirmed, launch_launched, launch_delayed, launch_aborted, booking_confirmed, booking_canceled, invoice_issued"
         string subject
         string message
     }
 
    User ||--o{ Notification : "can receive"
-   Booking o|--|{ Notification : "triggers"
-   Invoice o|--|{ Notification : "triggers"
-   Launch o|--|{ Notification : "triggers"
    Template ||--o{ Notification : "can be used in"
 ```
 
@@ -175,6 +210,8 @@ This ERD shows the following relationships:
 
 - A `User` can have multiple `Notification` messages.
 - A `Template` can be used in multiple `Notification` messages.
+
+In order to fill the subject and message fields of the `Notification` entity, we need to use the several entities involved in the booking and launch process, but not directly related to the `Notification` entity itself.
 
 ---
 
