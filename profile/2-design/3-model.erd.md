@@ -101,12 +101,13 @@ erDiagram
         string email
         string password_hash
         string name
-        enum role
+        enum role (traveler, agency, finance, it)
     }
 
     Traveler {
         string user_id PK,FK
         string contact_phone
+        string contact_email
         string emergency_contact
         json travel_preferences
     }
@@ -115,8 +116,9 @@ erDiagram
         string user_id PK,FK
         string description
         string contact_info
+        string contact_email
         string legal_name
-        string tax_id
+        string legal_tax_id
         string legal_address
     }
 
@@ -125,7 +127,7 @@ erDiagram
         string agency_id FK
         string name
         int capacity
-        enum range
+        enum range (low_earth, moon, mars)
     }
 
     Launch {
@@ -135,7 +137,7 @@ erDiagram
         datetime date
         string destination
         decimal price_per_seat
-        enum status
+        enum status (scheduled, confirmed, launched, delayed, aborted)
     }
 
     Booking {
@@ -144,7 +146,7 @@ erDiagram
         string launch_id FK
         int number_of_seats
         decimal total_price
-        enum status
+        enum status (pending, confirmed, canceled)
     }
 
     Invoice {
@@ -153,7 +155,7 @@ erDiagram
         string agency_id FK
         string launch_id FK
         decimal amount
-        enum status
+        enum status (pending, paid, failed)
         datetime date
     }
 
@@ -162,39 +164,34 @@ erDiagram
         string invoice_id FK
         decimal amount
         datetime date
-        enum status
     }
 
     Notification {
         string id PK
+        string user_id FK
         string template_id FK
-        string agency_id FK
-        string traveler_id FK
-        string launch_id FK
-        string booking_id FK
-        string invoice_id FK
+        string recipient_name
         string recipient_email
         string subject
         string message
+        json data
         datetime timestamp
-        enum status
+        enum status (pending, read, sent, failed)
     }
 
     EntryLog {
         string id PK
-        string entity_type
-        string entity_id
-        string action
+        string level (info, warning, error)
+        string message
         datetime timestamp
-        string details
+        json data
     }
 
     JobQueue {
         string id PK
-        string job_type
-        string entity_type
-        string entity_id
-        enum status
+        string job_type (launch_sync, booking_sync, )
+        string source_id
+        enum status (pending, running, completed, failed)
         datetime created_at
         datetime executed_at
         json data
@@ -202,7 +199,7 @@ erDiagram
 
     Template {
         string id PK
-        string name
+        string event_name (launch_scheduled, launch_confirmed, launch_launched, launch_delayed, launch_aborted, booking_confirmed, booking_canceled, invoice_issued)
         string subject
         string message
     }
@@ -218,7 +215,7 @@ erDiagram
     Launch ||--o| Invoice : generates
     Traveler ||--o{ Booking : makes
     Invoice ||--o{ Payment : "is paid by"
-    Notification ||--o{ Template : uses
+    Template ||--o{ Notification : uses
 ```
 
 ---

@@ -128,6 +128,8 @@ export class NotificationEntity {
   @ManyToOne(() => TemplateEntity)
   template!: TemplateEntity;
 
+  // ? Should be simplified to foreign keys?
+
   @ManyToOne(() => AgencyEntity)
   agency!: AgencyEntity;
 
