@@ -204,8 +204,6 @@ CREATE TABLE notifications (
   id TEXT PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id TEXT NOT NULL REFERENCES agencies(user_id),
   template_id TEXT NOT NULL REFERENCES templates(id),
-  recipient_name TEXT NOT NULL,
-  recipient_email TEXT NOT NULL,
   subject TEXT NOT NULL,
   message TEXT NOT NULL,
   data JSON,

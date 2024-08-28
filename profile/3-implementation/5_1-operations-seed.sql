@@ -50,7 +50,7 @@ INSERT INTO templates (id, event_name, subject, message) VALUES ('tmpl_1', 'book
 INSERT INTO templates (id, event_name, subject, message) VALUES ('tmpl_2', 'launch_scheduled', 'Launch Scheduled', 'The launch has been scheduled for {date}.');
 
 -- Notifications
-INSERT INTO notifications (id, template_id, user_id, recipient_name, recipient_email, subject, message, data, status)
+INSERT INTO notifications (id, template_id, user_id, subject, message, data, status)
 VALUES 
-  ('notif_1', 'tmpl_1', 'usr_t1', 'John Doe', 'john.doe@email.com', 'Booking Confirmation', 'Your booking for 1 seat(s) on the launch to Moon on 2025-07-20 has been confirmed.', '{"launch_id": "lnch_1", "destination": "Moon", "date": "2025-07-20"}', 'sent'),
-  ('notif_2', 'tmpl_2', 'usr_a1', 'SpaceX Corporation', 'info@spacex.com', 'Launch Scheduled', 'The launch has been scheduled for 2026-01-01.', '{"launch_id": "lnch_3", "date": "2026-01-01"}', 'pending');
+  ('notif_1', 'tmpl_1', 'usr_t1', 'Booking Confirmation', 'Your booking for 1 seat(s) on the launch to Moon on 2025-07-20 has been confirmed.', '{"launch_id": "lnch_1", "destination": "Moon", "date": "2025-07-20"}', 'sent'),
+  ('notif_2', 'tmpl_2', 'usr_a1', 'Launch Scheduled', 'The launch has been scheduled for 2026-01-01.', '{"launch_id": "lnch_3", "date": "2026-01-01"}', 'pending');
