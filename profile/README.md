@@ -10,7 +10,7 @@
 
 Create a solution for financial and IT employees, and also give access to agencies and travelers in order to manage their launches, bookings and financial operations.
 
-- [0. Project Summary Briefing](./0-project.briefing.md)
+- [**0. Project Briefing**](./0-project.briefing.md)
 
 ### 📋 Requirements
 
