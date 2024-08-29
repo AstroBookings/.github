@@ -4,6 +4,16 @@
 
 Detailed requirements for each domain are listed below.
 
+Table of contents:
+
+- [0. Authentication](#0-authentication)
+- [1. Agency Management](#1-agency-management)
+- [2. Booking Management](#2-booking-management)
+- [3. Financial Operations](#3-financial-operations)
+- [4. Notification System](#4-notification-system)
+- [5. Data Synchronization](#5-data-synchronization)
+- [6. System Monitoring](#6-system-monitoring)
+
 ## 0. Authentication
 
 Supports user registration, login, and secure access control for all system users including agencies, travelers, and employees. Implements JWT (JSON Web Token) for maintaining secure sessions.
