@@ -1,6 +1,6 @@
 # 🚀 Astro Bookings
 
-> Sample project for teaching full-stack development with modern technology and proven best practices.
+> Sample project for teaching full-stack development with modern technology (Angular, NestJS, Postgres, MongoDB) and proven best practices (DDD, Jest, Cypress).
 
 ### Company mission
 
@@ -64,7 +64,7 @@ Those are the repositories of the implementation:
 
 ## 👨‍🚀 About
 
-I am Alberto Basalo, a seasoned (**LII** years old, almost from the Roman numerals era 🏛️) advisor, consultor and instructor for programmers.
+I am Alberto Basalo, a seasoned (**LII** years old, _almost from the Roman numerals era_ 🏛️) advisor, consultor and instructor for programmers.
 
 I am focused on coding best practices, testing, and software architecture, with a special bias for the `TypeScript` ecosystem.
 
