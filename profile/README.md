@@ -10,7 +10,8 @@
 
 Create a solution for financial and IT employees, and also give access to agencies and travelers in order to manage their launches, bookings and financial operations.
 
-- [**0. 📋 Project Briefing**](./0-project.briefing.md)
+- [**0. 📋 Read the Project Briefing**](./0-project.briefing.md)
+- [_Or go to the implementation_](#-the-implementation)
 
 #### Received Requirements
 
@@ -59,7 +60,7 @@ The solution is a set of web applications made with `Angular` that consume sever
 
 ---
 
-![Astro Bookings Logo](./AstroBookings.png)
+[![Astro Bookings](./AstroBookings.png)](https://github.com/astrobookings)
 
 <!-- ## [📚 Project wiki](https://github.com/AstroBookings/.github/wiki)
 
