@@ -1,10 +1,10 @@
-# AstroBookings: System Architecture
+# 🚀 AstroBookings: 📝 System Architecture
 
 > Timestamp: 2024-08-19 20:30:00 UTC
 
 ## System Components
 
-### 🌐 Web Applications
+### [🌐 Web Applications](#-web-applications)
 
 0. `🌐 AuthWeb`: Authentication and user management interface
 1. `🌐 PublicWeb`: Showcase of available launches and public information
@@ -12,7 +12,7 @@
 3. `🌐 TravelerWeb`: Booking and management interface for travelers
 4. `🌐 SystemWeb`: Administrative interface for AstroBookings employees
 
-### 🧑‍💼 API Services
+### [🧑‍💼 API Services](#-api-services)
 
 1. `🧑‍💼 SystemAPI`: Handles, authorization, synchronization and system-wide logs operations
 2. `🧑‍💼 AgencyAPI`: Manages agency profiles and launches
@@ -20,7 +20,7 @@
 4. `🧑‍💼 FinanceAPI`: Manages invoicing and payments
 5. `🧑‍💼 NotifyAPI`: Handles email notifications
 
-### 📇 Databases
+### [📇 Databases](#-databases)
 
 1. `📇 SystemDB`: Stores user authentication data, system logs and job queues.
 2. `📇 OperationsDB`: Stores structured data for bookings, launches, and financial transactions

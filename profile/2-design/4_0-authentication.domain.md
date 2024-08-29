@@ -1,4 +1,4 @@
-# AstroBookings: Authentication Domain
+# 🚀 AstroBookings: 📝 Authentication Domain
 
 > Timestamp: 2024-08-20 21:30:00 UTC
 

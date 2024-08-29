@@ -22,14 +22,14 @@ Create a solution for financial and IT employees, and also give access to agenci
 
 ### 🧑‍🔬 Analysis
 
-- [1. Detailed Domain Requirements](./1-analysis/1-domain.requirements.md)
+- [1. Domain Requirements](./1-analysis/1-domain.requirements.md)
 - [2. System Requirements](./1-analysis/2-system.requirements.md)
 
 ## 🛰️ The Solution
 
 The solution is a set of web applications made with `Angular` that consume several REST APIs made with `NestJS`. Data is stored in `Postgres` and `MongoDB` databases.
 
-### 🎨 Design
+### 📝 Design
 
 - [1. System Architecture](./2-design/2-system.architecture.md)
 - [2. Data Model](./2-design/3-model.erd.md)

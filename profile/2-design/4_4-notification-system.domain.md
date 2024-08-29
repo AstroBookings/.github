@@ -1,4 +1,4 @@
-# AstroBookings: Notification System Domain
+# 🚀 AstroBookings: 📝 Notification System Domain
 
 > Timestamp: 2024-08-21 13:00:00 UTC
 

@@ -1,6 +1,6 @@
-# AstroBookings: Entity-Relationship Diagram
+# 🚀 AstroBookings: 📝 Entity-Relationship Diagram
 
-> Timestamp: 2024-08-19 21:30:00 UTC
+> Timestamp: 2024-08-29 21:30:00 UTC
 
 ## Entities
 
@@ -28,7 +28,7 @@
 
 > [!NOTE]
 >
-> > This diagram is a simplified version of the real system. There are refinements at implementation level.
+> > See a [diagram](#entity-relationship-diagram) of a simplified version of the real system. There will be refinements at implementation level.
 
 ## Relationships
 
