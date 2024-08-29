@@ -9,27 +9,27 @@
 0. [🌐 AuthWeb](#0--authweb): Authentication and user management interface
 1. [🌐 PublicWeb](#1--publicweb): Showcase of available launches and public information
 2. [🌐 AgencyWeb](#2--agencyweb): Management interface for space agencies
-3. `🌐 TravelerWeb`: Booking and management interface for travelers
-4. `🌐 SystemWeb`: Administrative interface for AstroBookings employees
+3. [🌐 TravelerWeb](#3--travelerweb): Booking and management interface for travelers
+4. [🌐 SystemWeb](#4--systemweb): Administrative interface for AstroBookings employees
 
 ### 🧑‍💼 API Services
 
-1. `🧑‍💼 SystemAPI`: Handles, authorization, synchronization and system-wide logs operations
-2. `🧑‍💼 AgencyAPI`: Manages agency profiles and launches
-3. `🧑‍💼 BookingAPI`: Handles seat reservations and cancellations
-4. `🧑‍💼 FinanceAPI`: Manages invoicing and payments
-5. `🧑‍💼 NotifyAPI`: Handles email notifications
+1. [🧑‍💼 SystemAPI](#0--systemapi): Handles, authorization, synchronization and system-wide logs operations
+2. [🧑‍💼 AgencyAPI](#1--agencyapi): Manages agency profiles and launches
+3. [🧑‍💼 BookingAPI](#2--bookingapi): Handles seat reservations and cancellations
+4. [🧑‍💼 FinanceAPI](#3--financeapi): Manages invoicing and payments
+5. [🧑‍💼 NotifyAPI](#4--notifyapi): Handles email notifications
 
 ### 📇 Databases
 
-1. `📇 SystemDB`: Stores user authentication data, system logs and job queues.
-2. `📇 OperationsDB`: Stores structured data for bookings, launches, and financial transactions
-3. `📇 CacheDB`: Provides quick data access for frequently requested information
+1. [📇 SystemDB](#0--systemdb): Stores user authentication data, system logs and job queues.
+2. [📇 OperationsDB](#1--operationsdb): Stores structured data for bookings, launches, and financial transactions
+3. [📇 CacheDB](#2--cachedb): Provides quick data access for frequently requested information
 
 ### 👽 External Services
 
-1. `👽 EmailSvc`: For sending notifications
-2. `👽 PaymentGW`: For processing payments
+1. [👽 EmailSvc](#0--emailsvc): For sending notifications
+2. [👽 PaymentGW](#1--paymentgw): For processing payments
 
 ## System Architecture Diagram
 
