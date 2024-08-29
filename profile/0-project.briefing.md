@@ -2,7 +2,7 @@
 
 > Timestamp: 2024-08-20 19:00:00 UTC
 
-AstroBookings is a comprehensive platform connecting space agencies with travelers for commercial space flights. It manages rocket launches, bookings, payments, and communications, ensuring a seamless experience for agencies and travelers while maintaining robust backend operations and monitoring.
+🚀 **AstroBookings** is a comprehensive platform connecting space agencies with travelers for commercial space flights. It manages rocket launches, bookings, payments, and communications, ensuring a seamless experience for agencies and travelers while maintaining robust backend operations and monitoring.
 
 The project is divided into seven main **domains**: `Authentication`, `Agency Management`, `Booking Management`, `Financial Operations`, `Notification System`, `Data Synchronization`, and `System Monitoring`. Each domain has specific requirements that cater to different user roles and system functionalities.
 
