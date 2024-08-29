@@ -168,8 +168,6 @@ erDiagram
         string id PK
         string user_id FK
         string template_id FK
-        string recipient_name
-        string recipient_email
         string subject
         string message
         json data
