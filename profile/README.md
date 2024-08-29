@@ -47,24 +47,18 @@ The solution is a set of web applications made with `Angular` that consume sever
 
 ## 🧑‍💻 The Implementation
 
-### 📇 DataBase schemas
-
-- [1. **SystemDB** schema](./3-implementation/5_0-system.schema.md)
-- [2. **OperationsDB** schema](./3-implementation/5_1-operations.schema.md)
-- [3. **CacheDB** schema](./3-implementation/5_2-cache.schema.md)
+Those are the repositories of the implementation:
 
 ### 🧑‍💼 API Service repositories
 
 - [0. **System API**](https://github.com/AstroBookings/system_api)
 - [4. **Notify API**](https://github.com/AstroBookings/notify_api)
 
----
+### 📇 DataBase schemas
 
-[![Astro Bookings](./AstroBookings.png)](https://github.com/astrobookings)
-
-<!-- ## [📚 Project wiki](https://github.com/AstroBookings/.github/wiki)
-
-Documentation relative to the project (requirements, design, coding guides, user manual...) -->
+- [1. **SystemDB** schema](./3-implementation/5_0-system.schema.md)
+- [2. **OperationsDB** schema](./3-implementation/5_1-operations.schema.md)
+- [3. **CacheDB** schema](./3-implementation/5_2-cache.schema.md)
 
 ---
 
@@ -79,3 +73,5 @@ I am glad to take you with me, hope I can help you to _develop your dream trip._
 > [!NOTE]
 >
 > > _[Alberto Basalo](https://github.com/albertobasalo)_ >> _Elevating Code Quality._
+
+[![Astro Bookings](./AstroBookings.png)](https://github.com/astrobookings)
