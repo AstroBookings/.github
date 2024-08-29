@@ -6,9 +6,9 @@
 
 ### 🌐 Web Applications
 
-0. [`🌐 AuthWeb`](#0--authweb): Authentication and user management interface
-1. `🌐 PublicWeb`: Showcase of available launches and public information
-2. `🌐 AgencyWeb`: Management interface for space agencies
+0. [🌐 AuthWeb](#0--authweb): Authentication and user management interface
+1. [🌐 PublicWeb](#1--publicweb): Showcase of available launches and public information
+2. [🌐 AgencyWeb](#2--agencyweb): Management interface for space agencies
 3. `🌐 TravelerWeb`: Booking and management interface for travelers
 4. `🌐 SystemWeb`: Administrative interface for AstroBookings employees
 
