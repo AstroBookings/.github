@@ -1,8 +1,10 @@
-# AstroBookings: System Schema
+# 🚀 AstroBookings: 🧑‍💻 System Schema
 
 This schema describes the documental `📇 SystemDB` of the AstroBookings platform.
 
 ## Entities
+
+Here is the ERD of the `📇 SystemDB` document database.
 
 ```mermaid
 erDiagram
@@ -51,6 +53,8 @@ erDiagram
 ```
 
 ## MongoDB Collections and Schemas
+
+Run the following commands in the MongoDB shell to create the collections and schemas.
 
 ### Users Collection
 
@@ -186,7 +190,15 @@ db.createCollection("job_queue", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      required: ["id", "job_type", "entity_type", "entity_id", "status", "created_at", "data"],
+      required: [
+        "id",
+        "job_type",
+        "entity_type",
+        "entity_id",
+        "status",
+        "created_at",
+        "data",
+      ],
       properties: {
         id: {
           bsonType: "string",
@@ -227,3 +239,7 @@ db.createCollection("job_queue", {
 db.job_queue.createIndex({ id: 1 }, { unique: true });
 db.job_queue.createIndex({ status: 1 });
 ```
+
+---
+
+## [🚀 AstroBookings](https://github.com/AstroBookings)

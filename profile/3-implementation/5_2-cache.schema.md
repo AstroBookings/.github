@@ -1,4 +1,4 @@
-# AstroBookings: Cache Schema
+# 🚀 AstroBookings: 🧑‍💻 Cache Schema
 
 This schema describes the documental `📇 CacheDB` of the AstroBookings platform.
 
@@ -45,6 +45,8 @@ erDiagram
 ```
 
 ## MongoDB Collections and Schemas
+
+Run the following commands in the MongoDB shell to create the collections and schemas.
 
 ### Launches Cache Collection
 
@@ -145,7 +147,15 @@ db.createCollection("bookings_cache", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      required: ["id", "traveler_id", "launch_id", "number_of_seats", "total_price", "status", "traveler"],
+      required: [
+        "id",
+        "traveler_id",
+        "launch_id",
+        "number_of_seats",
+        "total_price",
+        "status",
+        "traveler",
+      ],
       properties: {
         id: {
           bsonType: "string",
@@ -173,7 +183,12 @@ db.createCollection("bookings_cache", {
         },
         traveler: {
           bsonType: "object",
-          required: ["user_id", "contact_phone", "emergency_contact", "travel_preferences"],
+          required: [
+            "user_id",
+            "contact_phone",
+            "emergency_contact",
+            "travel_preferences",
+          ],
           properties: {
             user_id: {
               bsonType: "string",
@@ -197,5 +212,12 @@ db.createCollection("bookings_cache", {
     },
   },
 });
-db.bookings_cache.createIndex({ traveler_id: 1, launch_id: 1 }, { unique: true });
+db.bookings_cache.createIndex(
+  { traveler_id: 1, launch_id: 1 },
+  { unique: true }
+);
 ```
+
+---
+
+## [🚀 AstroBookings](https://github.com/AstroBookings)

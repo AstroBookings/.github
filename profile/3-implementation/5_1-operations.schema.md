@@ -1,8 +1,10 @@
-# AstroBookings: Operations Schema
+# 🚀 AstroBookings: 🧑‍💻 Operations Schema
 
 This schema describes the relational `📇 OperationsDB` of the AstroBookings platform.
 
 ## Entities
+
+Here is the ERD of the `📇 OperationsDB` relational database.
 
 ```mermaid
 erDiagram
@@ -102,9 +104,9 @@ erDiagram
 
 ```
 
-### Travelers Table
-
 ## PostgreSQL Tables and Schemas
+
+Run the following commands in the PostgreSQL shell to create the tables and schemas.
 
 ### Travelers Table
 
@@ -223,3 +225,7 @@ CREATE TABLE templates (
   message TEXT NOT NULL
 );
 ```
+
+---
+
+## [🚀 AstroBookings](https://github.com/AstroBookings)
