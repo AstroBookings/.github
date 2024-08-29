@@ -1,10 +1,12 @@
-# AstroBookings: Domain Requirements
+# 🚀 AstroBookings: 🧑‍🔬 Domain Requirements
 
 > Timestamp: 2024-08-19 14:00:00 UTC
 
-AstroBookings is a comprehensive platform connecting space agencies with travelers for commercial space flights. It manages rocket launches, bookings, payments, and communications, ensuring a seamless experience for agencies and travelers while maintaining robust backend operations and monitoring.
+🚀 **AstroBookings** is a comprehensive platform connecting space agencies with travelers for commercial space flights. It manages rocket launches, bookings, payments, and communications, ensuring a seamless experience for agencies and travelers while maintaining robust backend operations and monitoring.
 
-## Domains
+## Overview
+
+### Domains
 
 0. `Authentication`: Manages user registration, login, and access control for agencies, travelers, and employees.
 1. `Agency Management`: Handles agency profiles, rockets, and launch management.
@@ -14,7 +16,7 @@ AstroBookings is a comprehensive platform connecting space agencies with travele
 5. `Data Synchronization`: Allows IT employees to manage and initiate synchronization processes between databases.
 6. `System Monitoring`: Provides logging and system status monitoring for IT operations.
 
-## Roles
+### Roles
 
 - `visitor`: An unregistered user browsing the platform.
 - `user`: Any registered user of the system (includes agencies, travelers, and employees).
@@ -81,6 +83,8 @@ AstroBookings is a comprehensive platform connecting space agencies with travele
 - As an `IT employee` I want to **check the status of the notification service** so that _I can ensure it's functioning correctly_
 
 ---
+
+> Detailed requirements for each domain are listed below.
 
 ## 0. Authentication
 

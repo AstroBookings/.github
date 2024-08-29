@@ -1,4 +1,4 @@
-# AstroBookings: Project Briefing
+# 🚀 AstroBookings: 📋 Project Briefing
 
 > Timestamp: 2024-08-20 19:00:00 UTC
 
@@ -10,7 +10,13 @@ The solution will be developed using a microservices architecture, with separate
 
 The common vocabulary and understanding of the system's requirements is based on the following domain **entities**: `User`, `Traveler`, `Agency`, `Rocket`, `Launch`, `Booking`, `Invoice`, `Payment`, `Notification`, `EntryLog`, and `JobQueue`. These entities represent the core concepts of the space travel booking system and define the interactions between users, agencies, launches, and financial transactions.
 
-## Requirements by Domain
+Table of Contents:
+
+- [Requirements by Domain](#-requirements-by-domain)
+- [System Components](#-system-components)
+- [Main Entities](#-main-entities)
+
+## 📋 Requirements by Domain
 
 ### 0. Authentication
 
@@ -65,7 +71,7 @@ The common vocabulary and understanding of the system's requirements is based on
 2. View system logs to monitor system behavior
 3. Check the status of the notification service
 
-## System Components
+## 🧑‍💻 System Components
 
 ### 🌐 Web Applications
 
@@ -100,7 +106,7 @@ Databases use a combination of **Postgres** and **MongoDB**, with **Redis** as a
 1. `👽 EmailSvc`: For sending notifications
 2. `👽 PaymentGW`: For processing payments
 
-## Main Entities
+## 📇 Main Entities
 
 1. `User`: Base entity for all system users with login credentials and role.
 2. `Traveler`: Specialization of User. Represents clients who make bookings for space travels.

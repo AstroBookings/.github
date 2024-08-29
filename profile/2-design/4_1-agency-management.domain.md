@@ -160,6 +160,7 @@ erDiagram
         int agency_id FK
         int rocket_id FK
         datetime date
+        string mission
         string destination
         decimal price_per_seat
         enum status

@@ -38,6 +38,7 @@ erDiagram
         string agency_id FK
         string rocket_id FK
         datetime date
+        string mission
         string destination
         decimal price_per_seat
         enum status "scheduled, confirmed, launched, delayed, aborted"
@@ -73,8 +74,6 @@ erDiagram
         string id PK
         string user_id FK
         string template_id FK
-        string recipient_name
-        string recipient_email
         string subject
         string message
         json data
@@ -153,6 +152,7 @@ CREATE TABLE IF NOT EXISTS launches (
   agency_id TEXT NOT NULL REFERENCES agencies(user_id),
   rocket_id TEXT NOT NULL REFERENCES rockets(id),
   date TIMESTAMP NOT NULL,
+  mission TEXT NOT NULL,
   destination TEXT NOT NULL,
   price_per_seat NUMERIC NOT NULL,
   status TEXT CHECK (status IN ('scheduled', 'confirmed', 'launched', 'delayed', 'aborted'))

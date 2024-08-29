@@ -132,6 +132,7 @@ erDiagram
         string agency_id FK
         string rocket_id FK
         datetime date
+        string mission
         string destination
         decimal price_per_seat
         enum status "scheduled, confirmed, launched, delayed, aborted"
