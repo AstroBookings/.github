@@ -10,9 +10,9 @@
 
 Create a solution for financial and IT employees, and also give access to agencies and travelers in order to manage their launches, bookings and financial operations.
 
-- [**0. Project Briefing**](./0-project.briefing.md)
+- [**0. 📋 Project Briefing**](./0-project.briefing.md)
 
-### 📋 Requirements
+#### Received Requirements
 
 - [General requirements from the CEO](./0-requirements/1-AstroBookings-General_requirements-CEO-letter.md)
 - [Operational requirements from the COO](./0-requirements/2-AstroBookings-Operational_requirements-COO-letter.md)
@@ -48,15 +48,14 @@ The solution is a set of web applications made with `Angular` that consume sever
 
 ### 📇 DataBase schemas
 
-- [1. SystemDB schema](./3-implementation/5_0-system.schema.md)
-- [2. OperationsDB schema](./3-implementation/5_1-operations.schema.md)
-- [3. CacheDB schema](./3-implementation/5_2-cache.schema.md)
+- [1. **SystemDB** schema](./3-implementation/5_0-system.schema.md)
+- [2. **OperationsDB** schema](./3-implementation/5_1-operations.schema.md)
+- [3. **CacheDB** schema](./3-implementation/5_2-cache.schema.md)
 
 ### 🧑‍💼 API Service repositories
 
-- [0. 🧑‍💼 System API](https://github.com/AstroBookings/system_api)
-
-- [4. 🧑‍💼 Notify API](https://github.com/AstroBookings/notify_api)
+- [0. **System API**](https://github.com/AstroBookings/system_api)
+- [4. **Notify API**](https://github.com/AstroBookings/notify_api)
 
 ---
 
