@@ -2,17 +2,17 @@
 
 > Timestamp: 2024-08-19 20:30:00 UTC
 
-## System Components
+## System Components overview
 
-### [🌐 Web Applications](#-web-applications)
+### 🌐 Web Applications
 
-0. `🌐 AuthWeb`: Authentication and user management interface
+0. [`🌐 AuthWeb`](#0--authweb): Authentication and user management interface
 1. `🌐 PublicWeb`: Showcase of available launches and public information
 2. `🌐 AgencyWeb`: Management interface for space agencies
 3. `🌐 TravelerWeb`: Booking and management interface for travelers
 4. `🌐 SystemWeb`: Administrative interface for AstroBookings employees
 
-### [🧑‍💼 API Services](#-api-services)
+### 🧑‍💼 API Services
 
 1. `🧑‍💼 SystemAPI`: Handles, authorization, synchronization and system-wide logs operations
 2. `🧑‍💼 AgencyAPI`: Manages agency profiles and launches
@@ -20,7 +20,7 @@
 4. `🧑‍💼 FinanceAPI`: Manages invoicing and payments
 5. `🧑‍💼 NotifyAPI`: Handles email notifications
 
-### [📇 Databases](#-databases)
+### 📇 Databases
 
 1. `📇 SystemDB`: Stores user authentication data, system logs and job queues.
 2. `📇 OperationsDB`: Stores structured data for bookings, launches, and financial transactions
