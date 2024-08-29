@@ -8,13 +8,13 @@
 
 ### Domains
 
-0. [Authentication](#0--authentication): Manages user registration, login, and access control for agencies, travelers, and employees.
-1. [Agency Management](#1--agency-management): Handles agency profiles, rockets, and launch management.
-2. [Booking Management](#2--booking-management): Manages traveler bookings, seat reservations, cancellations, and the public-facing website for showcasing launches.
-3. [Financial Operations](#3--financial-operations): Handles invoicing, payments, and financial reporting.
-4. [Notification System](#4--notification-system): Manages communication with users about bookings, launches, and other events.
-5. [Data Synchronization](#5--data-synchronization): Allows IT employees to manage and initiate synchronization processes between databases.
-6. [System Monitoring](#6--system-monitoring): Provides logging and system status monitoring for IT operations.
+0. [Authentication](#0-authentication): Manages user registration, login, and access control for agencies, travelers, and employees.
+1. [Agency Management](#1-agency-management): Handles agency profiles, rockets, and launch management.
+2. [Booking Management](#2-booking-management): Manages traveler bookings, seat reservations, cancellations, and the public-facing website for showcasing launches.
+3. [Financial Operations](#3-financial-operations): Handles invoicing, payments, and financial reporting.
+4. [Notification System](#4-notification-system): Manages communication with users about bookings, launches, and other events.
+5. [Data Synchronization](#5-data-synchronization): Allows IT employees to manage and initiate synchronization processes between databases.
+6. [System Monitoring](#6-system-monitoring): Provides logging and system status monitoring for IT operations.
 
 ### Roles
 
