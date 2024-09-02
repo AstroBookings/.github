@@ -1,6 +1,6 @@
 # 🚀 Astro Bookings
 
-> Sample project for teaching full-stack development with modern technology (Angular, NestJS, Postgres, MongoDB) and proven best practices (DDD, Jest, Cypress).
+> Sample project for teaching full-stack development with modern technology (`Angular, NestJS, Postgres, MongoDB`) and proven best practices (DDD, unit test with `Jest`, E2E test with `Cypress`).
 
 ### Company mission
 
@@ -11,18 +11,13 @@
 Create a solution for financial and IT employees, and also give access to agencies and travelers in order to manage their launches, bookings and financial operations.
 
 - [**0. 📋 Read the Project Briefing**](./0-project.briefing.md)
-- [_Or go to the implementation_](#-the-implementation)
+- [_Go to the implementation_](#-the-implementation)
 
-#### Received Requirements
-
-- [General requirements from the CEO](./0-requirements/1-AstroBookings-General_requirements-CEO-letter.md)
-- [Operational requirements from the COO](./0-requirements/2-AstroBookings-Operational_requirements-COO-letter.md)
-- [Marketing requirements from the CMO](./0-requirements/3-AstroBookings-Marqueting_requirements-CMO-letter.md)
-- [Financial requirements from the CFO](./0-requirements/4-AstroBookings-Financial_requirements-CFO-letter.md)
-- [Technical requirements from the CTO](./0-requirements/5-AstroBookings-Technical_requirements-CTO-letter.md)
+Or keep reading the project analysis and solution design.
 
 ### 🧑‍🔬 Analysis
 
+- [0. Stakeholders Letters](./0-requirements/0-stakeholders.letters.md)
 - [1. Domain Requirements](./1-analysis/1-domain.requirements.md)
 - [2. System Requirements](./1-analysis/2-system.requirements.md)
 
@@ -34,16 +29,7 @@ The solution is a set of web applications made with `Angular` that consume sever
 
 - [1. System Architecture](./2-design/2-system.architecture.md)
 - [2. Data Model](./2-design/3-model.erd.md)
-
-#### Domain specifics
-
-- [0. Authentication](./2-design/4_0-authentication.domain.md)
-- [1. Agencies](./2-design/4_1-agency-management.domain.md)
-- [2. Bookings](./2-design/4_2-booking-management.domain.md)
-- [3. Financial](./2-design/4_3-financial-operations.domain.md)
-- [4. Notifications](./2-design/4_4-notification-system.domain.md)
-- [5. Data Synchronization](./2-design/4_5-data-synchronization.domain.md)
-- [6. Monitoring](./2-design/4_6-system-monitoring.domain.md)
+- [3. Solution Domain specifics](./2-design/4-solution.domain.md)
 
 ## 🧑‍💻 The Implementation
 
