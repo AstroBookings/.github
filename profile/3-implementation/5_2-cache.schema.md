@@ -14,17 +14,19 @@ erDiagram
         enum status
         int available_seats
         string slug
-        agency:{
-            string id FK
-            string name
-        }
-        rocket: {
-            string id PK
-            string name
-            int capacity
-            enum range
-        }
     }
+    Agency {
+        string id FK
+        string name
+    }
+    Rocket {
+        string id PK
+        string name
+        int capacity
+        enum range
+    }
+    LaunchCache ||--|| Agency : "operated by"
+    LaunchCache ||--|| Rocket : "uses"
 
     BookingCache {
         string id PK
@@ -34,13 +36,14 @@ erDiagram
         decimal total_price
         datetime booked_at
         enum status
-        traveler:{
-            string user_id FK
-            string contact_phone
-            string emergency_contact
-            json travel_preferences
-        }
     }
+    Traveler {
+        string user_id FK
+        string contact_phone
+        string emergency_contact
+        json travel_preferences
+    }
+    BookingCache ||--|| Traveler : "booked by"
 ```
 
 ## MongoDB Collections and Schemas
