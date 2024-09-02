@@ -16,19 +16,11 @@ erDiagram
         enum role
     }
 
-    Notification {
-        string id PK
-        string user_id FK
-        string message
-        datetime timestamp
-        enum status
-    }
-
     EntryLog {
         string id PK
-        string entity_type
-        string entity_id FK
         string user_id FK
+        string entity_type
+        string entity_id
         datetime timestamp
         string level
         string message
@@ -92,44 +84,6 @@ db.createCollection("users", {
 });
 db.users.createIndex({ id: 1 }, { unique: true });
 db.users.createIndex({ email: 1 }, { unique: true });
-```
-
-### Notifications Collection
-
-```js
-db.getCollection("notifications").drop();
-db.createCollection("notifications", {
-  validator: {
-    $jsonSchema: {
-      bsonType: "object",
-      required: ["id", "userId", "message", "timestamp", "status"],
-      properties: {
-        id: {
-          bsonType: "string",
-          description: "must be an string and is required",
-        },
-        userId: {
-          bsonType: "int",
-          description: "must be an integer and is required",
-        },
-        message: {
-          bsonType: "string",
-          description: "must be a string and is required",
-        },
-        timestamp: {
-          bsonType: "date",
-          description: "must be a date and is required",
-        },
-        status: {
-          enum: ["unread", "read", "sent"],
-          description: "must be one of the enum values and is required",
-        },
-      },
-    },
-  },
-});
-db.notifications.createIndex({ id: 1 }, { unique: true });
-db.notifications.createIndex({ status: 1 });
 ```
 
 ### EntryLogs Collection

@@ -6,7 +6,6 @@ This schema describes the documental `📇 CacheDB` of the AstroBookings platfor
 
 ```mermaid
 erDiagram
-
     LaunchCache {
         string id PK
         datetime launch_on
