@@ -9,6 +9,7 @@ erDiagram
     LaunchCache {
         string id PK
         datetime launch_on
+        string mission
         string destination
         decimal price_per_seat
         enum status
@@ -40,6 +41,7 @@ erDiagram
     Traveler {
         string user_id FK
         string contact_phone
+        string contact_email
         string emergency_contact
         json travel_preferences
     }
@@ -60,6 +62,7 @@ db.createCollection("launches_cache", {
       required: [
         "id",
         "launch_on",
+        "mission",
         "destination",
         "price_per_seat",
         "status",
@@ -78,6 +81,10 @@ db.createCollection("launches_cache", {
           description: "must be a date and is required",
         },
         destination: {
+          bsonType: "string",
+          description: "must be a string and is required",
+        },
+        mission: {
           bsonType: "string",
           description: "must be a string and is required",
         },
@@ -188,6 +195,7 @@ db.createCollection("bookings_cache", {
           required: [
             "user_id",
             "contact_phone",
+            "contact_email",
             "emergency_contact",
             "travel_preferences",
           ],
@@ -195,6 +203,10 @@ db.createCollection("bookings_cache", {
             user_id: {
               bsonType: "string",
               description: "must be an string and is required",
+            },
+            contact_email: {
+              bsonType: "string",
+              description: "must be a string and is required",
             },
             contact_phone: {
               bsonType: "string",
