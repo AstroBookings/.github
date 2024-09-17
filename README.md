@@ -6,9 +6,9 @@ The portal for Astro Bookings Clean Development
 > This `.github` thing is a special repository for _GitHub_.
 > It allows organizations having a profile. It is not intended to write any code here. It is just for documentation and configuration.
 
-## [Go to Astro Bookings Core Documentation](https://github.com/AstroBookings)
+## [Go to Astro Bookings Core Documentation](https://github.com/AstroBookings/.github/blob/main/profile/README.md)
 
-[![Astro Bookings Logo](./profile/AstroBookings.png)](https://github.com/AstroBookings)
+[![Astro Bookings Logo](./profile/AstroBookings.png)](https://github.com/AstroBookings/.github/blob/main/profile/README.md)
 
 <!-- ## [Astro Bookings Project wiki](https://github.com/AstroBookings/.github/wiki/Astro-Bookings-Community-Development)
 
