@@ -14,11 +14,11 @@
 
 ### 🧑‍💼 API Services
 
-1. [🧑‍💼 SystemAPI](#0--systemapi): Handles, authorization, synchronization and system-wide logs operations
-2. [🧑‍💼 AgencyAPI](#1--agencyapi): Manages agency profiles and launches
-3. [🧑‍💼 BookingAPI](#2--bookingapi): Handles seat reservations and cancellations
-4. [🧑‍💼 FinanceAPI](#3--financeapi): Manages invoicing and payments
-5. [🧑‍💼 NotifyAPI](#4--notifyapi): Handles email notifications
+0. [🧑‍💼 SystemAPI](#0--systemapi): Handles, authorization, synchronization and system-wide logs operations
+1. [🧑‍💼 AgencyAPI](#1--agencyapi): Manages agency profiles and launches
+2. [🧑‍💼 BookingAPI](#2--bookingapi): Handles seat reservations and cancellations
+3. [🧑‍💼 FinanceAPI](#3--financeapi): Manages invoicing and payments
+4. [🧑‍💼 NotifyAPI](#4--notifyapi): Handles email notifications
 
 ### 📇 Databases
 
